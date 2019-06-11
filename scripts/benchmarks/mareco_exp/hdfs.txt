@@ -1,0 +1,46 @@
+-------------------------------
+Basic Instructions to Use HDFS:
+-------------------------------
+
+Some Basic Informations:
+------------------------
+    * HDFS nodes:
+        sith0, sith1, sith2, sith3, sith7
+
+    * You can access HDFS only from the above nodes to add,
+      remove and modify your files.
+
+    * HDFS HOME PATH:
+        /opt/spark/hadoop-2.6.4
+
+How to Access HDFS:
+-------------------
+    1. First you need to login in one of the HDFS nodes (as I refer above):
+        $ssh thegates
+        $ssh sith0
+
+Basic Instructions:
+-------------------
+    1. Create a directory in HDFS:
+        /opt/spark/hadoop-2.6.4/bin/hdfs dfs -mkdir /user/<my_directory>
+    
+    2. Upload a file in HDFS:
+        /opt/spark/hadoop-2.6.4/bin/hdfs dfs -put </path/to/the/file> /user/<my_directory>
+    
+    3. Remove a file from HDFS:
+        /opt/spark/hadoop-2.6.4/bin/hdfs dfs -rm /user/<my_directory>/<file_to_delete>
+    
+    4. View the files which are located in HDFS:
+        /opt/spark/hadoop-2.6.4/bin/hdfs dfs -ls /user/<my_directory>
+    
+    5. Copy files from HDFS to local:
+        /opt/spark/hadoop-2.6.4/bin/hdfs dfs -copyToLocal /user/<my_directory> </local/path/to/save/the/file>
+
+Access a File in HDFS Using Your Application:
+---------------------------------------------
+    You can access the HDFS path using this way:
+        hdfs://sith0-hadoop:9000/user/<my_directory>/<file_name>
+
+Some Useful Links:
+------------------
+    * https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html
