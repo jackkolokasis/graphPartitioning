@@ -1,0 +1,25 @@
+package org.apache.spark.graphx
+package org.apache.spark.graphx.impl
+import org.apache.spark.graphx._
+import org.apache.spark.rdd.RDD
+object multilevelKwayPartitioning extends Serializable {
+    def mergeVertexList (partitionsRDD: RDD[(PartitionID, EdgePartition[ED, VD])]):
+    RDD[List[List[VertexId]]] = {
+        val mergeList = partitionsRDD.foreach{
+            case (partId: PartitionID, edPart: EdgePartition[ED, VD]) =>
+            edPart.foldLeft(RDD[List[List[VertexId]]]()) { (r, f) =>
+            {
+                val iter = r.iterator
+                while (iter.hasNext) {
+                    val elem = iter.next()
+                    if (f.map(el => el.contains(elem.getSrcId())).contains(true) == false
+                        && (f.map(el => el.contains(elem.getDstId())).contains(true) == false)) {
+                            f::List(elem.getSrcId(), elem.getDstId())
+                        }
+                }
+            }
+            }
+        }
+    mergeList.foreach(println)
+    }
+}

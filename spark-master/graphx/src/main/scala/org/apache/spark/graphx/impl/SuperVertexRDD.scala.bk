@@ -1,0 +1,72 @@
+class SuperVertexRDD[ED: ClassTag, VD: ClassTag] private[graphx] (
+  extends EdgeRDDImpl[ED] {
+      var mergeEdgeList: RDD[(PartitionID, List[EdgePartition[ED, VD]])]
+      var unmeredEdgeList: RDD[List(PartitionID, List[EdgePartition[ED, VD]])]
+
+      def mergeEdges(part: PartitionID, edgeObj: EdgePartition[ED, VD]){
+          if (mergeEdgeList.filter(el => el._1==part).map(element =>
+                  element._2.map(edge => 
+                  {
+                      ((edgeObj.srcId == edge.srcId) ||
+                      (edgeObj.srcId == edge.dstId) || 
+                      (edgeObj.dstId == edge.srcId) || 
+                      (edgeObj.dstId == edge.dstId))
+                  })).map(e => e.contains(true)).contains(true) == false) 
+                  {
+                      if (mergeEdgeList.filter(el => el._1==part).isEmpty == true) 
+                      {
+                          mergeEdgeList = mergeEdgeList.union(part, List(edgeObj)) 
+                      }
+                      else 
+                      {
+                          mergeEdgeList = mergeEdgeList.map(el => 
+                              if (el._1 == part) 
+                              {
+                                  (el._1, el._2:::List(edgeObj))
+                              }
+                              else
+                              {
+                                  (el._1, el._2)
+                              }
+                              )
+                      }
+                  }
+                  else
+                  {
+                      if (unmergeEdgeList.filter(el => el._1==part).isEmpty == true) 
+                      {
+                          unmergeEdgeList = unmergeEdgeList.union(part, List(edgeObj)) 
+                      }
+                      else
+                      {
+                          unmergeEdgeList = unmergeEdgeList.map(el => 
+                                  if (el._1 == part) 
+                                  {
+                                      (el._1, el._2:::List(edgeObj))
+                                  }
+                                  else
+                                  {
+                                      (el._1, el._2)
+                                  }
+                              )
+                      }
+                  }
+      }
+      
+      def distrCompare(left: RDD[(Int,Int)], right: RDD[(Int,Int)]): Boolean = {
+          val rdd1 = left.join(right).map{case(k, (lv,rv)) => (k,lv-rv)}
+          val rdd2 = rdd1.filter{case(k,v)=>(v!=0)}
+          var equal = true;
+          rdd2.map{
+              case(k,v)=> if(v!=0) equal = false
+          }
+          return equal
+      }
+
+      def merge(part: PartitionID, partitionRDD: RDD[(PartitionID, EdgePartition[ED, VD])]: Unit = {
+
+      }
+
+
+
+}

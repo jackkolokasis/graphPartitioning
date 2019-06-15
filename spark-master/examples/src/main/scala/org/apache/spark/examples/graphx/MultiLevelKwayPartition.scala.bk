@@ -1,0 +1,196 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// scalastyle:off
+
+package org.apache.spark.examples.graphx
+
+import com.google.common.collect.Sets
+import org.apache.spark._
+import org.apache.spark.graphx._
+import org.apache.spark.graphx.impl.EdgePartition
+import org.apache.spark.rdd.RDD
+import scala.collection.JavaConversions
+import scala.language.existentials
+import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.HashSet
+import scala.collection.mutable.HashMap
+
+class MultiLevelKwayPartition {
+
+  private def distinctList(xs:List[(Int, Int)]) = {
+    var distVertex = new ListBuffer[(Int, Int)]
+    var seen = HashSet[Int]()
+    for (x <- xs) {
+      if (!seen(x._1) && !seen(x._2)) {
+        distVertex += x
+        seen += x._1
+        seen += x._2
+      }
+    }
+    distVertex.result()
+  }
+
+  def mergeVertices(graph) {
+    graph.edges.partitionsRDD.mapPartitionsWithIndex{(partId, iter) =>
+      val sVertex = new SuperVertexRDD()
+
+      iter.foreach{ v =>
+        val edges = List(v.getSrcIds(_*)).zip(List(v.getDstIds(_*)))
+        var i=0
+        while(i<edges.length){
+          sVertex.addSuperVertex(edges(i)._1 , edges(i)._2)
+        }
+      }Iterator(partId, sVertex)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  graph
+//  private def distinctList(xs:List[(Int, Int)]) = {
+//    var distVertex = new ListBuffer[(Int, Int)]
+//    var seen = HashSet[Int]()
+//    for (x <- xs) {
+//      if (!seen(x._1) && !seen(x._2)) {
+//        distVertex += x
+//        seen += x._1
+//        seen += x._2
+//      }
+//    }
+//    distVertex.result()
+//  }
+//
+//  def readFile(sc: SparkContext,
+//    path: String,
+//    canonicalOrientation: Boolean = false,
+//    numEdgePartitions: Int = -1,
+//    edgeStorageLevel: StorageLevel = StorageLevel.MEMORY_ONLY ) :Unit ={
+//      
+//      if (numEdgePartitions > 0) {
+//         val lines = sc.textFile(path, numEdgePartitions).coalesce(numEdgePartitions)
+//      }
+//      else {
+//          val lines = sc.textFile(path)
+//      }
+//       
+//      val edges = lines.mapPartitionsWithIndex { (pid, iter) =>
+//        val allEdges = ListBuffer[(Int, Int)]()
+//        iter.foreach{line =>
+//          
+//          if (!line.isEmpty && line(0) != '#') {
+//            val lineArray = line.split("\\s+")
+//            if (lineArray.length < 2){
+//              throw new IllegalArgumentException("Invalid line: " + line)
+//            }
+//            
+//            val srcId = lineArray(0).toInt
+//            val dstId = lineArray(1).toInt
+//            
+//            if (canonicalOrientation && srcId > dstId){
+//              val edtmp = (dstId, srcId)
+//              allEdges += edtmp
+//            }
+//            else {
+//              val edtmp = (srcId, dstId)
+//              allEdges += edtmp
+//            }
+//          }
+//        }
+//        Iterator((pid, allEdges.toList))
+//    }.persist(edgeStorageLevel).setName("GraphLoader.edgeListFile - edges (%s)".format(path))
+//    
+//    coarsernGraph(edges)
+//    }
+//
+//  def coarsernGraph (edges: RDD[(Int, List[(Int, Int)])]): Unit = {
+//    val superVertexId = 1000
+//    val edges.mapPartitionsWithIndex{(pid, iter){
+//      val mergeEdges = ListBuffer[(Int, Int)]
+//      iter.foreach{ edge =>
+//        val srcId = edge._1
+//        val dstId = edge._2
+//        val numOfNodes in 
+//        val superVertexSrcId = -1
+//        val superVertexDstId = -1
+//        if (VertexHashMap.exist(_._2.contains(srcId)) {
+//          superVertexSrcId = VertexHashMap.find(_._2.contains(srcId)).get._1
+//        }
+//        
+//        if (VertexHashMap.exist(_._2.contains(dstId)) {
+//          superVertexSrcId = VertexHashMap.find(_._2.contains(dstId)).get._1
+//        }
+//
+//        if (superVertexSrcId == -1 && superVertexDstId == -1) {
+//          VertexHashMap += (superVertexId, List(srcId, dstId))
+//          val tmp = (superVertexId, superVertexId)
+//          mergeEdges += tmp
+//        }
+//        else if (superVertexSrcId != -1){
+//          val tmp = (srcId, superVertecDstId)
+//          mergeEdges += tmp
+//        }
+//        else {
+//          val tmp = (superVertexSrcId, dstId)
+//          mergeEdges += tmp
+//          }
+//      }Iterator(pid, mergeEdges.toList)
+//    }.persist(edgeStorageLeve).setName("GraphCoansern")
+//    }
+//    
+//    val allEdges= edges.map(_._2)
+//
+//    superVertex = sc.makeRDD(
+//      distinctList(allEdges.fold(Nil:List[(Int, Int)]){
+//      case(acc, elem) => acc:::distinctList(elem)
+//      }))
+//
+//    val simpleVertex = edges.flatMap(_._2).subtract(superVertex)
+//
+//    val superVertexfinal = superVertex.map(v => (v._1, List(v._1, v._2)))
+//
+//    val superEdges = simpleVertex.map(e =>
+//    {
+//      superVertexfinal.foreach{x =>
+//        if(x._2.contain(e._1))
+//      }
+//    }
+// }
+//}
+
+// scalastyle:on
