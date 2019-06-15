@@ -36,15 +36,15 @@ do
     esac
 done
 
-./benchmark.sh -a pagerank -n ${NUM_PARTITIONS} -c ${CORES} -i 5
+./benchmark_parsel.sh -a pagerank -n ${NUM_PARTITION} -c ${CORES} -i 5
 echo "PAGERANK      DONE"
 
-./benchmark.sh -a cc -n ${NUM_PARTITIONS} -c ${CORES} -i 5
+./benchmark_parsel.sh -a cc -n ${NUM_PARTITION} -c ${CORES} -i 5
 echo "CC      DONE"
 
-./benchmark.sh -a triangles -n ${NUM_PARTITIONS} -c ${CORES} -i 5
+./benchmark_parsel.sh -a triangles -n ${NUM_PARTITION} -c ${CORES} -i 5
 echo "TRIANGLES      DONE"
 
-./benchmark.sh -a sssp -n ${NUM_PARTITIONS} -c ${CORES} -i 5
+./benchmark_parsel.sh -a sssp -n ${NUM_PARTITION} -c ${CORES} -i 5
 echo "SSSP      DONE"
 
