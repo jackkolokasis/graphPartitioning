@@ -1,4 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/external/kafka-0-10-sql/src/main/resources/META-INF,/opt/spark/spark-master/external/kafka-0-10-sql/target/scala-2.11/classes/META-INF)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/external/kafka-0-10-sql/src/main/resources/META-INF/services,/opt/spark/spark-master/external/kafka-0-10-sql/target/scala-2.11/classes/META-INF/services)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/external/kafka-0-10-sql/src/main/resources/META-INF/services/org.apache.spark.sql.sources.DataSourceRegister,/opt/spark/spark-master/external/kafka-0-10-sql/target/scala-2.11/classes/META-INF/services/org.apache.spark.sql.sources.DataSourceRegister)[0m

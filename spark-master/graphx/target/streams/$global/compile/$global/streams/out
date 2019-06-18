@@ -1,3 +1,0 @@
-[0m[[31merror[0m] [0m[warn] /home/kolokasis/Downloads/spark-master/graphx/src/main/scala/org/apache/spark/graphx/impl/EdgeRDDImpl.scala:135: non-variable type argument org.apache.spark.graphx.Edge[ED] in type pattern Iterator[org.apache.spark.graphx.Edge[ED]] (the underlying of Iterator[org.apache.spark.graphx.Edge[ED]]) is unchecked since it is eliminated by erasure[0m
-[0m[[31merror[0m] [0m[warn]        case (pid: PartitionID, iter: Iterator[Edge[ED]]) => ([0m
-[0m[[31merror[0m] [0m[warn] [0m

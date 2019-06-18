@@ -1,9 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/people.json,/opt/spark/spark-master/examples/target/scala-2.11/classes/people.json)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/full_user.avsc,/opt/spark/spark-master/examples/target/scala-2.11/classes/full_user.avsc)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/users.parquet,/opt/spark/spark-master/examples/target/scala-2.11/classes/users.parquet)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/users.avro,/opt/spark/spark-master/examples/target/scala-2.11/classes/users.avro)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/employees.json,/opt/spark/spark-master/examples/target/scala-2.11/classes/employees.json)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/user.avsc,/opt/spark/spark-master/examples/target/scala-2.11/classes/user.avsc)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/people.txt,/opt/spark/spark-master/examples/target/scala-2.11/classes/people.txt)[0m
-[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/examples/src/main/resources/kv1.txt,/opt/spark/spark-master/examples/target/scala-2.11/classes/kv1.txt)[0m
