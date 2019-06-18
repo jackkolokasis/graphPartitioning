@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.0">
+ <file name="/opt/spark/spark-master/graphx/src/main/scala/org/apache/spark/graphx/GraphLoader.scala">
+  <error column="4" line="95" source="org.scalastyle.scalariform.TokenChecker" severity="warning" message="Are you sure you want to println? If yes, wrap the code block with
+      // scalastyle:off println
+      println(...)
+      // scalastyle:on println"/>
+ </file>
+ <file name="/opt/spark/spark-master/graphx/src/main/scala/org/apache/spark/graphx/impl/EdgePartition.scala">
+  <error column="5" line="79" source="org.scalastyle.scalariform.TokenChecker" severity="warning" message="Are you sure you want to println? If yes, wrap the code block with
+      // scalastyle:off println
+      println(...)
+      // scalastyle:on println"/>
+  <error column="9" line="81" source="org.scalastyle.scalariform.TokenChecker" severity="warning" message="Are you sure you want to println? If yes, wrap the code block with
+      // scalastyle:off println
+      println(...)
+      // scalastyle:on println"/>
+  <error column="5" line="83" source="org.scalastyle.scalariform.TokenChecker" severity="warning" message="Are you sure you want to println? If yes, wrap the code block with
+      // scalastyle:off println
+      println(...)
+      // scalastyle:on println"/>
+  <error column="9" line="85" source="org.scalastyle.scalariform.TokenChecker" severity="warning" message="Are you sure you want to println? If yes, wrap the code block with
+      // scalastyle:off println
+      println(...)
+      // scalastyle:on println"/>
+  <error column="4" line="162" source="org.scalastyle.scalariform.TokenChecker" severity="warning" message="Are you sure you want to println? If yes, wrap the code block with
+      // scalastyle:off println
+      println(...)
+      // scalastyle:on println"/>
+  <error column="6" line="170" source="org.scalastyle.scalariform.TokenChecker" severity="warning" message="Are you sure you want to println? If yes, wrap the code block with
+      // scalastyle:off println
+      println(...)
+      // scalastyle:on println"/>
+ </file>
+</checkstyle>

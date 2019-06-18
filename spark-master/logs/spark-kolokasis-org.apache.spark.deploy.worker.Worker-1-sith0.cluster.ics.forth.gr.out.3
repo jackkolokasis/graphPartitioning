@@ -1,0 +1,34 @@
+Spark Command: /usr/lib/jvm/java-1.8.0-openjdk//bin/java -cp /opt/spark/spark-master/conf/:/opt/spark/spark-master/assembly/target/scala-2.11/jars/* -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://sith7-hadoop:7077
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/06/12 16:36:59 INFO Worker: Started daemon with process name: 3954411@sith0.cluster.ics.forth.gr
+19/06/12 16:36:59 INFO SignalUtils: Registered signal handler for TERM
+19/06/12 16:36:59 INFO SignalUtils: Registered signal handler for HUP
+19/06/12 16:36:59 INFO SignalUtils: Registered signal handler for INT
+19/06/12 16:36:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/12 16:36:59 INFO SecurityManager: Changing view acls to: kolokasis
+19/06/12 16:36:59 INFO SecurityManager: Changing modify acls to: kolokasis
+19/06/12 16:36:59 INFO SecurityManager: Changing view acls groups to: 
+19/06/12 16:36:59 INFO SecurityManager: Changing modify acls groups to: 
+19/06/12 16:36:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(kolokasis); groups with view permissions: Set(); users  with modify permissions: Set(kolokasis); groups with modify permissions: Set()
+19/06/12 16:36:59 INFO Utils: Successfully started service 'sparkWorker' on port 44567.
+19/06/12 16:37:00 INFO Worker: Starting Spark worker 192.168.2.100:44567 with 32 cores, 252.0 GB RAM
+19/06/12 16:37:00 INFO Worker: Running Spark version 2.2.0-SNAPSHOT
+19/06/12 16:37:00 INFO Worker: Spark home: /opt/spark/spark-master
+19/06/12 16:37:00 INFO log: Logging initialized @1353ms
+19/06/12 16:37:00 INFO Server: jetty-9.2.16.v20160414
+19/06/12 16:37:00 INFO Server: Started @1408ms
+19/06/12 16:37:00 INFO ServerConnector: Started ServerConnector@276f66f8{HTTP/1.1}{0.0.0.0:8081}
+19/06/12 16:37:00 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+19/06/12 16:37:00 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@5a7fb876{/logPage,null,AVAILABLE,@Spark}
+19/06/12 16:37:00 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@41098b5f{/logPage/json,null,AVAILABLE,@Spark}
+19/06/12 16:37:00 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@7454fbe7{/,null,AVAILABLE,@Spark}
+19/06/12 16:37:00 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@a427874{/json,null,AVAILABLE,@Spark}
+19/06/12 16:37:00 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@7686e416{/static,null,AVAILABLE,@Spark}
+19/06/12 16:37:00 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@40b09043{/log,null,AVAILABLE,@Spark}
+19/06/12 16:37:00 INFO WorkerWebUI: Bound WorkerWebUI to sith0-hadoop, and started at http://192.168.2.100:8081
+19/06/12 16:37:00 INFO Worker: Connecting to master sith7-hadoop:7077...
+19/06/12 16:37:00 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@50c3141c{/metrics/json,null,AVAILABLE,@Spark}
+19/06/12 16:37:00 INFO TransportClientFactory: Successfully created connection to sith7-hadoop/192.168.2.107:7077 after 43 ms (0 ms spent in bootstraps)
+19/06/12 16:37:00 INFO Worker: Successfully registered with master spark://sith7-hadoop:7077
+19/06/12 16:37:01 ERROR Worker: RECEIVED SIGNAL TERM

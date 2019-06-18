@@ -1,0 +1,3 @@
+[0m[[33mwarn[0m] [0m/opt/spark/spark-master/examples/src/main/scala/org/apache/spark/examples/mllib/AbstractParams.scala:41: method declarations in class TypeApi is deprecated: Use `decls` instead[0m
+[0m[[33mwarn[0m] [0m    val allAccessors = tpe.declarations.collect {[0m
+[0m[[33mwarn[0m] [0m[0m

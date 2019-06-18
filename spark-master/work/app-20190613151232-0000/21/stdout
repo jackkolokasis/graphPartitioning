@@ -1,0 +1,2099 @@
+ 0.141: [G1Ergonomics (Heap Sizing) expand the heap, requested expansion amount: 2147483648 bytes, attempted expansion amount: 2147483648 bytes]
+[Global flags]
+     intx ActiveProcessorCount                      = -1                                  {product}
+    uintx AdaptiveSizeDecrementScaleFactor          = 4                                   {product}
+    uintx AdaptiveSizeMajorGCDecayTimeScale         = 10                                  {product}
+    uintx AdaptiveSizePausePolicy                   = 0                                   {product}
+    uintx AdaptiveSizePolicyCollectionCostMargin    = 50                                  {product}
+    uintx AdaptiveSizePolicyInitializingSteps       = 20                                  {product}
+    uintx AdaptiveSizePolicyOutputInterval          = 0                                   {product}
+    uintx AdaptiveSizePolicyWeight                  = 10                                  {product}
+    uintx AdaptiveSizeThroughPutPolicy              = 0                                   {product}
+    uintx AdaptiveTimeWeight                        = 25                                  {product}
+     bool AdjustConcurrency                         = false                               {product}
+     bool AggressiveHeap                            = false                               {product}
+     bool AggressiveOpts                            = false                               {product}
+     intx AliasLevel                                = 3                                   {C2 product}
+     bool AlignVector                               = false                               {C2 product}
+     intx AllocateInstancePrefetchLines             = 1                                   {product}
+     intx AllocatePrefetchDistance                  = 192                                 {product}
+     intx AllocatePrefetchInstr                     = 0                                   {product}
+     intx AllocatePrefetchLines                     = 4                                   {product}
+     intx AllocatePrefetchStepSize                  = 64                                  {product}
+     intx AllocatePrefetchStyle                     = 1                                   {product}
+     bool AllowJNIEnvProxy                          = false                               {product}
+     bool AllowNonVirtualCalls                      = false                               {product}
+     bool AllowParallelDefineClass                  = false                               {product}
+     bool AllowUserSignalHandlers                   = false                               {product}
+     bool AlwaysActAsServerClassMachine             = false                               {product}
+     bool AlwaysCompileLoopMethods                  = false                               {product}
+     bool AlwaysLockClassLoader                     = false                               {product}
+     bool AlwaysPreTouch                            = false                               {product}
+     bool AlwaysRestoreFPU                          = false                               {product}
+     bool AlwaysTenure                              = false                               {product}
+     bool AssertOnSuspendWaitFailure                = false                               {product}
+     bool AssumeMP                                  = true                                {product}
+     intx AutoBoxCacheMax                           = 128                                 {C2 product}
+    uintx AutoGCSelectPauseMillis                   = 5000                                {product}
+     intx BCEATraceLevel                            = 0                                   {product}
+     intx BackEdgeThreshold                         = 100000                              {pd product}
+     bool BackgroundCompilation                     = true                                {pd product}
+    uintx BaseFootPrintEstimate                     = 268435456                           {product}
+     intx BiasedLockingBulkRebiasThreshold          = 20                                  {product}
+     intx BiasedLockingBulkRevokeThreshold          = 40                                  {product}
+     intx BiasedLockingDecayTime                    = 25000                               {product}
+     intx BiasedLockingStartupDelay                 = 4000                                {product}
+     bool BindCMSThreadToCPU                        = false                               {diagnostic}
+     bool BindGCTaskThreadsToCPUs                   = false                               {product}
+     bool BlockLayoutByFrequency                    = true                                {C2 product}
+     intx BlockLayoutMinDiamondPercentage           = 20                                  {C2 product}
+     bool BlockLayoutRotateLoops                    = true                                {C2 product}
+     bool BlockOffsetArrayUseUnallocatedBlock       = false                               {diagnostic}
+     bool BranchOnRegister                          = false                               {C2 product}
+     bool BytecodeVerificationLocal                 = false                               {product}
+     bool BytecodeVerificationRemote                = true                                {product}
+     bool C1OptimizeVirtualCallProfiling            = true                                {C1 product}
+     bool C1PatchInvokeDynamic                      = true                                {C1 diagnostic}
+     bool C1ProfileBranches                         = true                                {C1 product}
+     bool C1ProfileCalls                            = true                                {C1 product}
+     bool C1ProfileCheckcasts                       = true                                {C1 product}
+     bool C1ProfileInlinedCalls                     = true                                {C1 product}
+     bool C1ProfileVirtualCalls                     = true                                {C1 product}
+     bool C1UpdateMethodData                        = true                                {C1 product}
+     intx CICompilerCount                          := 15                                  {product}
+     bool CICompilerCountPerCPU                     = true                                {product}
+     bool CITime                                    = false                               {product}
+     bool CMSAbortSemantics                         = false                               {product}
+    uintx CMSAbortablePrecleanMinWorkPerIteration   = 100                                 {product}
+     intx CMSAbortablePrecleanWaitMillis            = 100                                 {manageable}
+    uintx CMSBitMapYieldQuantum                     = 10485760                            {product}
+    uintx CMSBootstrapOccupancy                     = 50                                  {product}
+     bool CMSClassUnloadingEnabled                  = true                                {product}
+    uintx CMSClassUnloadingMaxInterval              = 0                                   {product}
+     bool CMSCleanOnEnter                           = true                                {product}
+     bool CMSCompactWhenClearAllSoftRefs            = true                                {product}
+    uintx CMSConcMarkMultiple                       = 32                                  {product}
+     bool CMSConcurrentMTEnabled                    = true                                {product}
+    uintx CMSCoordinatorYieldSleepCount             = 10                                  {product}
+     bool CMSDumpAtPromotionFailure                 = false                               {product}
+     bool CMSEdenChunksRecordAlways                 = true                                {product}
+    uintx CMSExpAvgFactor                           = 50                                  {product}
+     bool CMSExtrapolateSweep                       = false                               {product}
+    uintx CMSFullGCsBeforeCompaction                = 0                                   {product}
+    uintx CMSIncrementalDutyCycle                   = 10                                  {product}
+    uintx CMSIncrementalDutyCycleMin                = 0                                   {product}
+     bool CMSIncrementalMode                        = false                               {product}
+    uintx CMSIncrementalOffset                      = 0                                   {product}
+     bool CMSIncrementalPacing                      = true                                {product}
+    uintx CMSIncrementalSafetyFactor                = 10                                  {product}
+    uintx CMSIndexedFreeListReplenish               = 4                                   {product}
+     intx CMSInitiatingOccupancyFraction            = -1                                  {product}
+    uintx CMSIsTooFullPercentage                    = 98                                  {product}
+   double CMSLargeCoalSurplusPercent                = 0.950000                            {product}
+   double CMSLargeSplitSurplusPercent               = 1.000000                            {product}
+     bool CMSLoopWarn                               = false                               {product}
+    uintx CMSMaxAbortablePrecleanLoops              = 0                                   {product}
+     intx CMSMaxAbortablePrecleanTime               = 5000                                {product}
+    uintx CMSOldPLABMax                             = 1024                                {product}
+    uintx CMSOldPLABMin                             = 16                                  {product}
+    uintx CMSOldPLABNumRefills                      = 4                                   {product}
+    uintx CMSOldPLABReactivityFactor                = 2                                   {product}
+     bool CMSOldPLABResizeQuicker                   = false                               {product}
+    uintx CMSOldPLABToleranceFactor                 = 4                                   {product}
+     bool CMSPLABRecordAlways                       = true                                {product}
+    uintx CMSParPromoteBlocksToClaim                = 16                                  {product}
+     bool CMSParallelInitialMarkEnabled             = true                                {product}
+     bool CMSParallelRemarkEnabled                  = true                                {product}
+     bool CMSParallelSurvivorRemarkEnabled          = true                                {product}
+    uintx CMSPrecleanDenominator                    = 3                                   {product}
+    uintx CMSPrecleanIter                           = 3                                   {product}
+    uintx CMSPrecleanNumerator                      = 2                                   {product}
+     bool CMSPrecleanRefLists1                      = true                                {product}
+     bool CMSPrecleanRefLists2                      = false                               {product}
+     bool CMSPrecleanSurvivors1                     = false                               {product}
+     bool CMSPrecleanSurvivors2                     = true                                {product}
+    uintx CMSPrecleanThreshold                      = 1000                                {product}
+     bool CMSPrecleaningEnabled                     = true                                {product}
+     bool CMSPrintChunksInDump                      = false                               {product}
+     bool CMSPrintEdenSurvivorChunks                = false                               {product}
+     bool CMSPrintObjectsInDump                     = false                               {product}
+    uintx CMSRemarkVerifyVariant                    = 1                                   {product}
+     bool CMSReplenishIntermediate                  = true                                {product}
+    uintx CMSRescanMultiple                         = 32                                  {product}
+    uintx CMSSamplingGrain                          = 16384                               {product}
+     bool CMSScavengeBeforeRemark                   = false                               {product}
+    uintx CMSScheduleRemarkEdenPenetration          = 50                                  {product}
+    uintx CMSScheduleRemarkEdenSizeThreshold        = 2097152                             {product}
+    uintx CMSScheduleRemarkSamplingRatio            = 5                                   {product}
+   double CMSSmallCoalSurplusPercent                = 1.050000                            {product}
+   double CMSSmallSplitSurplusPercent               = 1.100000                            {product}
+     bool CMSSplitIndexedFreeListBlocks             = true                                {product}
+     intx CMSTriggerInterval                        = -1                                  {manageable}
+    uintx CMSTriggerRatio                           = 80                                  {product}
+     intx CMSWaitDuration                           = 2000                                {manageable}
+    uintx CMSWorkQueueDrainThreshold                = 10                                  {product}
+     bool CMSYield                                  = true                                {product}
+    uintx CMSYieldSleepCount                        = 0                                   {product}
+    uintx CMSYoungGenPerWorker                      = 67108864                            {pd product}
+    uintx CMS_FLSPadding                            = 1                                   {product}
+    uintx CMS_FLSWeight                             = 75                                  {product}
+    uintx CMS_SweepPadding                          = 1                                   {product}
+    uintx CMS_SweepTimerThresholdMillis             = 10                                  {product}
+    uintx CMS_SweepWeight                           = 75                                  {product}
+    uintx CPUForCMSThread                           = 0                                   {diagnostic}
+     bool CheckEndorsedAndExtDirs                   = false                               {product}
+     bool CheckJNICalls                             = false                               {product}
+     bool ClassUnloading                            = true                                {product}
+     bool ClassUnloadingWithConcurrentMark          = true                                {product}
+     intx ClearFPUAtPark                            = 0                                   {product}
+     bool ClipInlining                              = true                                {product}
+    uintx CodeCacheExpansionSize                    = 65536                               {pd product}
+    uintx CodeCacheMinimumFreeSpace                 = 512000                              {product}
+     bool CollectGen0First                          = false                               {product}
+     bool CompactFields                             = true                                {product}
+     intx CompilationPolicyChoice                   = 3                                   {product}
+ccstrlist CompileCommand                            =                                     {product}
+    ccstr CompileCommandFile                        =                                     {product}
+ccstrlist CompileOnly                               =                                     {product}
+     intx CompileThreshold                          = 10000                               {pd product}
+     bool CompilerThreadHintNoPreempt               = true                                {product}
+     intx CompilerThreadPriority                    = -1                                  {product}
+     intx CompilerThreadStackSize                   = 0                                   {pd product}
+    uintx CompressedClassSpaceSize                  = 1073741824                          {product}
+    uintx ConcGCThreads                            := 6                                   {product}
+     intx ConditionalMoveLimit                      = 3                                   {C2 pd product}
+     intx ContendedPaddingWidth                     = 128                                 {product}
+     bool ConvertSleepToYield                       = true                                {pd product}
+     bool ConvertYieldToSleep                       = false                               {product}
+     bool CrashOnOutOfMemoryError                   = false                               {product}
+     bool CreateMinidumpOnCrash                     = false                               {product}
+     bool CriticalJNINatives                        = true                                {product}
+     bool DTraceAllocProbes                         = false                               {product}
+     bool DTraceMethodProbes                        = false                               {product}
+     bool DTraceMonitorProbes                       = false                               {product}
+     bool DebugInlinedCalls                         = true                                {C2 diagnostic}
+     bool DebugNonSafepoints                        = false                               {diagnostic}
+     bool Debugging                                 = false                               {product}
+    uintx DefaultMaxRAMFraction                     = 4                                   {product}
+     intx DefaultThreadPriority                     = -1                                  {product}
+     bool DeferInitialCardMark                      = false                               {diagnostic}
+     intx DeferPollingPageLoopCount                 = -1                                  {product}
+     intx DeferThrSuspendLoopCount                  = 4000                                {product}
+     bool DeoptimizeRandom                          = false                               {product}
+     bool DisableAttachMechanism                    = false                               {product}
+     bool DisableExplicitGC                         = false                               {product}
+ccstrlist DisableIntrinsic                          =                                     {C2 diagnostic}
+     bool DisplayVMOutput                           = true                                {diagnostic}
+     bool DisplayVMOutputToStderr                   = false                               {product}
+     bool DisplayVMOutputToStdout                   = false                               {product}
+     bool DoEscapeAnalysis                          = true                                {C2 product}
+     intx DominatorSearchLimit                      = 1000                                {C2 diagnostic}
+     bool DontCompileHugeMethods                    = true                                {product}
+     bool DontYieldALot                             = false                               {pd product}
+    ccstr DumpLoadedClassList                       =                                     {product}
+     bool DumpReplayDataOnError                     = true                                {product}
+     bool DumpSharedSpaces                          = false                               {product}
+     bool EagerXrunInit                             = false                               {product}
+     intx EliminateAllocationArraySizeLimit         = 64                                  {C2 product}
+     bool EliminateAllocations                      = true                                {C2 product}
+     bool EliminateAutoBox                          = true                                {C2 product}
+     bool EliminateLocks                            = true                                {C2 product}
+     bool EliminateNestedLocks                      = true                                {C2 product}
+     intx EmitSync                                  = 0                                   {product}
+     bool EnableContended                           = true                                {product}
+     bool EnableInvokeDynamic                       = true                                {diagnostic}
+     bool EnableTracing                             = false                               {product}
+    uintx ErgoHeapSizeLimit                         = 0                                   {product}
+    ccstr ErrorFile                                 =                                     {product}
+    ccstr ErrorReportServer                         =                                     {product}
+   double EscapeAnalysisTimeout                     = 20.000000                           {C2 product}
+     bool EstimateArgEscape                         = true                                {product}
+     bool ExitOnOutOfMemoryError                    = false                               {product}
+     bool ExplicitGCInvokesConcurrent               = false                               {product}
+     bool ExplicitGCInvokesConcurrentAndUnloadsClasses  = false                               {product}
+     bool ExtendedDTraceProbes                      = false                               {product}
+    ccstr ExtraSharedClassListFile                  =                                     {product}
+     bool FLSAlwaysCoalesceLarge                    = false                               {product}
+    uintx FLSCoalescePolicy                         = 2                                   {product}
+   double FLSLargestBlockCoalesceProximity          = 0.990000                            {product}
+     bool FLSVerifyAllHeapReferences                = false                               {diagnostic}
+     bool FLSVerifyIndexTable                       = false                               {diagnostic}
+     bool FLSVerifyLists                            = false                               {diagnostic}
+     bool FailOverToOldVerifier                     = true                                {product}
+     bool FastTLABRefill                            = false                               {product}
+     intx FenceInstruction                          = 0                                   {ARCH product}
+     intx FieldsAllocationStyle                     = 1                                   {product}
+     bool FilterSpuriousWakeups                     = true                                {product}
+     bool FoldStableValues                          = true                                {diagnostic}
+     bool ForceDynamicNumberOfGCThreads             = false                               {diagnostic}
+     bool ForceNUMA                                 = false                               {product}
+     bool ForceTimeHighResolution                   = false                               {product}
+     bool ForceUnreachable                          = false                               {diagnostic}
+     intx FreqInlineSize                            = 325                                 {pd product}
+   double G1ConcMarkStepDurationMillis              = 10.000000                           {product}
+    uintx G1ConcRSHotCardLimit                      = 4                                   {product}
+    uintx G1ConcRSLogCacheSize                      = 10                                  {product}
+     intx G1ConcRefinementGreenZone                 = 23                                  {product}
+     intx G1ConcRefinementRedZone                   = 138                                 {product}
+     intx G1ConcRefinementServiceIntervalMillis     = 300                                 {product}
+    uintx G1ConcRefinementThreads                   = 23                                  {product}
+     intx G1ConcRefinementThresholdStep             = 0                                   {product}
+     intx G1ConcRefinementYellowZone                = 69                                  {product}
+    uintx G1ConfidencePercent                       = 50                                  {product}
+    uintx G1HeapRegionSize                         := 8388608                             {product}
+    uintx G1HeapWastePercent                        = 5                                   {product}
+    uintx G1MixedGCCountTarget                      = 8                                   {product}
+     bool G1PrintHeapRegions                        = false                               {diagnostic}
+     bool G1PrintRegionLivenessInfo                 = false                               {diagnostic}
+     intx G1RSetRegionEntries                       = 1024                                {product}
+    uintx G1RSetScanBlockSize                       = 64                                  {product}
+     intx G1RSetSparseRegionEntries                 = 16                                  {product}
+     intx G1RSetUpdatingPauseTimePercent            = 10                                  {product}
+     intx G1RefProcDrainInterval                    = 10                                  {product}
+    uintx G1ReservePercent                          = 10                                  {product}
+    uintx G1SATBBufferEnqueueingThresholdPercent    = 60                                  {product}
+     intx G1SATBBufferSize                          = 1024                                {product}
+     bool G1SummarizeConcMark                      := true                                {diagnostic}
+     bool G1SummarizeRSetStats                      = false                               {diagnostic}
+     intx G1SummarizeRSetStatsPeriod                = 0                                   {diagnostic}
+     bool G1TraceConcRefinement                     = false                               {diagnostic}
+     intx G1UpdateBufferSize                        = 256                                 {product}
+     bool G1UseAdaptiveConcRefinement               = true                                {product}
+     bool G1VerifyHeapRegionCodeRoots               = false                               {diagnostic}
+     bool G1VerifyRSetsDuringFullGC                 = false                               {diagnostic}
+    uintx GCDrainStackTargetSize                    = 64                                  {product}
+    uintx GCHeapFreeLimit                           = 2                                   {product}
+    uintx GCLockerEdenExpansionPercent              = 5                                   {product}
+     bool GCLockerInvokesConcurrent                 = false                               {product}
+    uintx GCLockerRetryAllocationCount              = 2                                   {diagnostic}
+    uintx GCLogFileSize                             = 8192                                {product}
+     bool GCParallelVerificationEnabled             = true                                {diagnostic}
+    uintx GCPauseIntervalMillis                     = 201                                 {product}
+    uintx GCTaskTimeStampEntries                    = 200                                 {product}
+    uintx GCTimeLimit                               = 98                                  {product}
+    uintx GCTimeRatio                               = 9                                   {product}
+     intx GuaranteedSafepointInterval               = 1000                                {diagnostic}
+    uintx HeapBaseMinAddress                        = 2147483648                          {pd product}
+     bool HeapDumpAfterFullGC                       = false                               {manageable}
+     bool HeapDumpBeforeFullGC                      = false                               {manageable}
+     bool HeapDumpOnOutOfMemoryError                = false                               {manageable}
+    ccstr HeapDumpPath                              =                                     {manageable}
+    uintx HeapFirstMaximumCompactionCount           = 3                                   {product}
+    uintx HeapMaximumCompactionInterval             = 20                                  {product}
+    uintx HeapSizePerGCThread                       = 87241520                            {product}
+     bool IgnoreEmptyClassPaths                     = false                               {product}
+     bool IgnoreUnrecognizedVMOptions               = false                               {product}
+     bool IgnoreUnverifiableClassesDuringDump       = false                               {diagnostic}
+    uintx IncreaseFirstTierCompileThresholdAt       = 50                                  {product}
+     bool IncrementalInline                         = true                                {C2 product}
+    uintx InitialBootClassLoaderMetaspaceSize       = 4194304                             {product}
+    uintx InitialCodeCacheSize                      = 2555904                             {pd product}
+    uintx InitialHeapSize                          := 2147483648                          {product}
+    uintx InitialRAMFraction                        = 64                                  {product}
+   double InitialRAMPercentage                      = 1.562500                            {product}
+    uintx InitialSurvivorRatio                      = 8                                   {product}
+    uintx InitialTenuringThreshold                  = 7                                   {product}
+    uintx InitiatingHeapOccupancyPercent           := 35                                  {product}
+     bool Inline                                    = true                                {product}
+    ccstr InlineDataFile                            =                                     {product}
+     intx InlineSmallCode                           = 2000                                {pd product}
+     bool InlineSynchronizedMethods                 = true                                {C1 product}
+     bool InsertMemBarAfterArraycopy                = true                                {C2 product}
+     intx InteriorEntryAlignment                    = 16                                  {C2 pd product}
+     intx InterpreterProfilePercentage              = 33                                  {product}
+     bool JNIDetachReleasesMonitors                 = true                                {product}
+     bool JavaMonitorsInStackTrace                  = true                                {product}
+     intx JavaPriority10_To_OSPriority              = -1                                  {product}
+     intx JavaPriority1_To_OSPriority               = -1                                  {product}
+     intx JavaPriority2_To_OSPriority               = -1                                  {product}
+     intx JavaPriority3_To_OSPriority               = -1                                  {product}
+     intx JavaPriority4_To_OSPriority               = -1                                  {product}
+     intx JavaPriority5_To_OSPriority               = -1                                  {product}
+     intx JavaPriority6_To_OSPriority               = -1                                  {product}
+     intx JavaPriority7_To_OSPriority               = -1                                  {product}
+     intx JavaPriority8_To_OSPriority               = -1                                  {product}
+     intx JavaPriority9_To_OSPriority               = -1                                  {product}
+     bool LIRFillDelaySlots                         = false                               {C1 pd product}
+    uintx LargePageHeapSizeThreshold                = 134217728                           {product}
+    uintx LargePageSizeInBytes                      = 0                                   {product}
+     bool LazyBootClassLoader                       = true                                {product}
+     intx LiveNodeCountInliningCutoff               = 40000                               {C2 product}
+     bool LoadExecStackDllInVMThread                = true                                {product}
+     bool LogCompilation                            = false                               {diagnostic}
+     bool LogEvents                                 = true                                {diagnostic}
+    uintx LogEventsBufferEntries                    = 250                                 {diagnostic}
+    ccstr LogFile                                   =                                     {diagnostic}
+     bool LogVMOutput                               = false                               {diagnostic}
+     bool LoopLimitCheck                            = true                                {C2 diagnostic}
+     intx LoopMaxUnroll                             = 16                                  {C2 product}
+     intx LoopOptsCount                             = 43                                  {C2 product}
+     intx LoopUnrollLimit                           = 60                                  {C2 pd product}
+     intx LoopUnrollMin                             = 4                                   {C2 product}
+     bool LoopUnswitching                           = true                                {C2 product}
+    uintx MallocMaxTestWords                        = 0                                   {diagnostic}
+     intx MallocVerifyInterval                      = 0                                   {diagnostic}
+     intx MallocVerifyStart                         = 0                                   {diagnostic}
+     bool ManagementServer                          = false                               {product}
+    uintx MarkStackSize                            := 4194304                             {product}
+    uintx MarkStackSizeMax                          = 16777216                            {product}
+    uintx MarkSweepAlwaysCompactCount               = 4                                   {product}
+    uintx MarkSweepDeadRatio                        = 5                                   {product}
+     intx MaxBCEAEstimateLevel                      = 5                                   {product}
+     intx MaxBCEAEstimateSize                       = 150                                 {product}
+    uintx MaxDirectMemorySize                       = 0                                   {product}
+     bool MaxFDLimit                                = true                                {product}
+    uintx MaxGCMinorPauseMillis                     = 18446744073709551615                    {product}
+    uintx MaxGCPauseMillis                          = 200                                 {product}
+    uintx MaxHeapFreeRatio                          = 70                                  {manageable}
+    uintx MaxHeapSize                              := 41875931136                         {product}
+     intx MaxInlineLevel                            = 9                                   {product}
+     intx MaxInlineSize                             = 35                                  {product}
+     intx MaxJNILocalCapacity                       = 65536                               {product}
+     intx MaxJavaStackTraceDepth                    = 1024                                {product}
+     intx MaxJumpTableSize                          = 65000                               {C2 product}
+     intx MaxJumpTableSparseness                    = 5                                   {C2 product}
+     intx MaxLabelRootDepth                         = 1100                                {C2 product}
+     intx MaxLoopPad                                = 11                                  {C2 product}
+    uintx MaxMetaspaceExpansion                     = 5451776                             {product}
+    uintx MaxMetaspaceFreeRatio                     = 70                                  {product}
+    uintx MaxMetaspaceSize                          = 18446744073709547520                    {product}
+    uintx MaxNewSize                               := 25123880960                         {product}
+     intx MaxNodeLimit                              = 75000                               {C2 product}
+ uint64_t MaxRAM                                    = 137438953472                        {pd product}
+    uintx MaxRAMFraction                            = 4                                   {product}
+   double MaxRAMPercentage                          = 25.000000                           {product}
+     intx MaxRecursiveInlineLevel                   = 1                                   {product}
+    uintx MaxTenuringThreshold                      = 15                                  {product}
+     intx MaxTrivialSize                            = 6                                   {product}
+     intx MaxVectorSize                             = 32                                  {C2 product}
+    uintx MetaspaceSize                             = 21807104                            {pd product}
+     bool MethodFlushing                            = true                                {product}
+    uintx MinHeapDeltaBytes                        := 8388608                             {product}
+    uintx MinHeapFreeRatio                          = 40                                  {manageable}
+     intx MinInliningThreshold                      = 250                                 {product}
+     intx MinJumpTableSize                          = 10                                  {C2 pd product}
+    uintx MinMetaspaceExpansion                     = 339968                              {product}
+    uintx MinMetaspaceFreeRatio                     = 40                                  {product}
+    uintx MinRAMFraction                            = 2                                   {product}
+   double MinRAMPercentage                          = 50.000000                           {product}
+    uintx MinSurvivorRatio                          = 3                                   {product}
+    uintx MinTLABSize                               = 2048                                {product}
+     intx MonitorBound                              = 0                                   {product}
+     bool MonitorInUseLists                         = false                               {product}
+     intx MultiArrayExpandLimit                     = 6                                   {C2 product}
+     bool MustCallLoadClassInternal                 = false                               {product}
+    uintx NUMAChunkResizeWeight                     = 20                                  {product}
+    uintx NUMAInterleaveGranularity                 = 2097152                             {product}
+    uintx NUMAPageScanRate                          = 256                                 {product}
+    uintx NUMASpaceResizeRate                       = 1073741824                          {product}
+     bool NUMAStats                                 = false                               {product}
+    ccstr NativeMemoryTracking                      = off                                 {product}
+     bool NeedsDeoptSuspend                         = false                               {pd product}
+     bool NeverActAsServerClassMachine              = false                               {pd product}
+     bool NeverTenure                               = false                               {product}
+    uintx NewRatio                                  = 2                                   {product}
+    uintx NewSize                                   = 1363144                             {product}
+    uintx NewSizeThreadIncrease                     = 5320                                {pd product}
+     intx NmethodSweepActivity                      = 10                                  {product}
+     intx NmethodSweepCheckInterval                 = 5                                   {product}
+     intx NmethodSweepFraction                      = 16                                  {product}
+     intx NodeLimitFudgeFactor                      = 2000                                {C2 product}
+    uintx NumberOfGCLogFiles                        = 0                                   {product}
+     intx NumberOfLoopInstrToAlign                  = 4                                   {C2 product}
+     intx ObjectAlignmentInBytes                    = 8                                   {lp64_product}
+    uintx OldPLABSize                               = 1024                                {product}
+    uintx OldPLABWeight                             = 50                                  {product}
+    uintx OldSize                                   = 5452592                             {product}
+     bool OmitStackTraceInFastThrow                 = true                                {product}
+ccstrlist OnError                                   =                                     {product}
+ccstrlist OnOutOfMemoryError                        =                                     {product}
+     intx OnStackReplacePercentage                  = 140                                 {pd product}
+     bool OptimizeExpensiveOps                      = true                                {C2 diagnostic}
+     bool OptimizeFill                              = true                                {C2 product}
+     bool OptimizePtrCompare                        = true                                {C2 product}
+     bool OptimizeStringConcat                      = true                                {C2 product}
+     bool OptoBundling                              = false                               {C2 pd product}
+     intx OptoLoopAlignment                         = 16                                  {pd product}
+     bool OptoScheduling                            = false                               {C2 pd product}
+    uintx PLABWeight                                = 75                                  {product}
+     bool PSChunkLargeArrays                        = true                                {product}
+     intx ParGCArrayScanChunk                       = 50                                  {product}
+     intx ParGCCardsPerStrideChunk                  = 256                                 {diagnostic}
+    uintx ParGCDesiredObjsFromOverflowList          = 20                                  {product}
+    uintx ParGCStridesPerThread                     = 2                                   {diagnostic}
+     bool ParGCTrimOverflow                         = true                                {product}
+     bool ParGCUseLocalOverflow                     = false                               {product}
+    uintx ParallelGCBufferWastePct                  = 10                                  {product}
+     bool ParallelGCRetainPLAB                      = false                               {diagnostic}
+    uintx ParallelGCThreads                         = 23                                  {product}
+     bool ParallelGCVerbose                         = false                               {product}
+    uintx ParallelOldDeadWoodLimiterMean            = 50                                  {product}
+    uintx ParallelOldDeadWoodLimiterStdDev          = 80                                  {product}
+     bool ParallelRefProcBalancingEnabled           = true                                {product}
+     bool ParallelRefProcEnabled                    = false                               {product}
+     bool PartialPeelAtUnsignedTests                = true                                {C2 product}
+     bool PartialPeelLoop                           = true                                {C2 product}
+     intx PartialPeelNewPhiDelta                    = 0                                   {C2 product}
+     bool PauseAtExit                               = false                               {diagnostic}
+     bool PauseAtStartup                            = false                               {diagnostic}
+    ccstr PauseAtStartupFile                        =                                     {diagnostic}
+    uintx PausePadding                              = 1                                   {product}
+     intx PerBytecodeRecompilationCutoff            = 200                                 {product}
+     intx PerBytecodeTrapLimit                      = 4                                   {product}
+     intx PerMethodRecompilationCutoff              = 400                                 {product}
+     intx PerMethodTrapLimit                        = 100                                 {product}
+     bool PerfAllowAtExitRegistration               = false                               {product}
+     bool PerfBypassFileSystemCheck                 = false                               {product}
+     intx PerfDataMemorySize                        = 32768                               {product}
+     intx PerfDataSamplingInterval                  = 50                                  {product}
+    ccstr PerfDataSaveFile                          =                                     {product}
+     bool PerfDataSaveToFile                        = false                               {product}
+     bool PerfDisableSharedMem                      = false                               {product}
+     intx PerfMaxStringConstLength                  = 1024                                {product}
+     intx PreInflateSpin                            = 10                                  {pd product}
+     bool PreferContainerQuotaForCPUCount           = true                                {product}
+     bool PreferInterpreterNativeStubs              = false                               {pd product}
+     intx PrefetchCopyIntervalInBytes               = 576                                 {product}
+     intx PrefetchFieldsAhead                       = 1                                   {product}
+     intx PrefetchScanIntervalInBytes               = 576                                 {product}
+     bool PreserveAllAnnotations                    = false                               {product}
+     bool PreserveFramePointer                      = false                               {pd product}
+    uintx PretenureSizeThreshold                    = 0                                   {product}
+     bool PrintActiveCpus                           = false                               {diagnostic}
+     bool PrintAdapterHandlers                      = false                               {diagnostic}
+     bool PrintAdaptiveSizePolicy                  := true                                {product}
+     bool PrintAssembly                             = false                               {diagnostic}
+    ccstr PrintAssemblyOptions                      =                                     {diagnostic}
+     bool PrintBiasedLockingStatistics              = false                               {diagnostic}
+     bool PrintCMSInitiationStatistics              = false                               {product}
+     intx PrintCMSStatistics                        = 0                                   {product}
+     bool PrintClassHistogram                       = false                               {manageable}
+     bool PrintClassHistogramAfterFullGC            = false                               {manageable}
+     bool PrintClassHistogramBeforeFullGC           = false                               {manageable}
+     bool PrintCodeCache                            = false                               {product}
+     bool PrintCodeCacheOnCompilation               = false                               {product}
+     bool PrintCommandLineFlags                     = false                               {product}
+     bool PrintCompilation                          = false                               {product}
+     bool PrintCompilation2                         = false                               {diagnostic}
+     bool PrintCompressedOopsMode                   = false                               {diagnostic}
+     bool PrintConcurrentLocks                      = false                               {manageable}
+     bool PrintContainerInfo                        = false                               {diagnostic}
+     bool PrintDTraceDOF                            = false                               {diagnostic}
+     intx PrintFLSCensus                            = 0                                   {product}
+     intx PrintFLSStatistics                        = 0                                   {product}
+     bool PrintFlagsFinal                          := true                                {product}
+     bool PrintFlagsInitial                         = false                               {product}
+     bool PrintGC                                  := true                                {manageable}
+     bool PrintGCApplicationConcurrentTime          = false                               {product}
+     bool PrintGCApplicationStoppedTime             = false                               {product}
+     bool PrintGCCause                              = true                                {product}
+     bool PrintGCDateStamps                         = false                               {manageable}
+     bool PrintGCDetails                           := true                                {manageable}
+     bool PrintGCID                                 = false                               {manageable}
+     bool PrintGCTaskTimeStamps                     = false                               {product}
+     bool PrintGCTimeStamps                        := true                                {manageable}
+     bool PrintHeapAtGC                             = false                               {product rw}
+     bool PrintHeapAtGCExtended                     = false                               {product rw}
+     bool PrintHeapAtSIGBREAK                       = true                                {product}
+     bool PrintInlining                             = false                               {diagnostic}
+     bool PrintInterpreter                          = false                               {diagnostic}
+     bool PrintIntrinsics                           = false                               {C2 diagnostic}
+     bool PrintJNIGCStalls                          = false                               {product}
+     bool PrintJNIResolving                         = false                               {product}
+     bool PrintMethodFlushingStatistics             = false                               {diagnostic}
+     bool PrintMethodHandleStubs                    = false                               {diagnostic}
+     bool PrintNMTStatistics                        = false                               {diagnostic}
+     bool PrintNMethods                             = false                               {diagnostic}
+     bool PrintNativeNMethods                       = false                               {diagnostic}
+     bool PrintOldPLAB                              = false                               {product}
+     bool PrintOopAddress                           = false                               {product}
+     bool PrintPLAB                                 = false                               {product}
+     bool PrintParallelOldGCPhaseTimes              = false                               {product}
+     bool PrintPreciseBiasedLockingStatistics       = false                               {C2 diagnostic}
+     bool PrintPreciseRTMLockingStatistics          = false                               {C2 diagnostic}
+     bool PrintPromotionFailure                     = false                               {product}
+     bool PrintReferenceGC                         := true                                {product}
+     bool PrintSafepointStatistics                  = false                               {product}
+     intx PrintSafepointStatisticsCount             = 300                                 {product}
+     intx PrintSafepointStatisticsTimeout           = -1                                  {product}
+     bool PrintSharedArchiveAndExit                 = false                               {product}
+     bool PrintSharedDictionary                     = false                               {product}
+     bool PrintSharedSpaces                         = false                               {product}
+     bool PrintSignatureHandlers                    = false                               {diagnostic}
+     bool PrintStringDeduplicationStatistics        = false                               {product}
+     bool PrintStringTableStatistics                = false                               {product}
+     bool PrintStubCode                             = false                               {diagnostic}
+     bool PrintTLAB                                 = false                               {product}
+     bool PrintTenuringDistribution                 = false                               {product}
+     bool PrintTieredEvents                         = false                               {product}
+     bool PrintVMOptions                            = false                               {product}
+     bool PrintVMQWaitTime                          = false                               {product}
+     bool PrintWarnings                             = true                                {product}
+    uintx ProcessDistributionStride                 = 4                                   {product}
+     bool ProfileDynamicTypes                       = true                                {C2 diagnostic}
+     bool ProfileInterpreter                        = true                                {pd product}
+     bool ProfileIntervals                          = false                               {product}
+     intx ProfileIntervalsTicks                     = 100                                 {product}
+     intx ProfileMaturityPercentage                 = 20                                  {product}
+     bool ProfileVM                                 = false                               {product}
+     bool ProfilerPrintByteCodeStatistics           = false                               {product}
+     bool ProfilerRecordPC                          = false                               {product}
+    uintx PromotedPadding                           = 3                                   {product}
+    uintx QueuedAllocationWarningCount              = 0                                   {product}
+    uintx RTMRetryCount                             = 5                                   {ARCH product}
+     bool RangeCheckElimination                     = true                                {product}
+     bool RangeLimitCheck                           = true                                {C2 diagnostic}
+     intx ReadPrefetchInstr                         = 0                                   {ARCH product}
+     bool ReassociateInvariants                     = true                                {C2 product}
+     bool ReduceBulkZeroing                         = true                                {C2 product}
+     bool ReduceFieldZeroing                        = true                                {C2 product}
+     bool ReduceInitialCardMarks                    = true                                {C2 product}
+     bool ReduceSignalUsage                         = false                               {product}
+     intx RefDiscoveryPolicy                        = 0                                   {product}
+     bool ReflectionWrapResolutionErrors            = true                                {product}
+     bool RegisterFinalizersAtInit                  = true                                {product}
+     bool RelaxAccessControlCheck                   = false                               {product}
+    ccstr ReplayDataFile                            =                                     {product}
+     bool RequireSharedSpaces                       = false                               {product}
+    uintx ReservedCodeCacheSize                     = 251658240                           {pd product}
+     bool ResizeOldPLAB                             = true                                {product}
+     bool ResizePLAB                                = true                                {product}
+     bool ResizeTLAB                                = true                                {pd product}
+     bool RestoreMXCSROnJNICalls                    = false                               {product}
+     bool RestrictContended                         = true                                {product}
+     bool RewriteBytecodes                          = true                                {pd product}
+     bool RewriteFrequentPairs                      = true                                {pd product}
+     intx SafepointPollOffset                       = 256                                 {C1 pd product}
+     intx SafepointSpinBeforeYield                  = 2000                                {product}
+     bool SafepointTimeout                          = false                               {product}
+     intx SafepointTimeoutDelay                     = 10000                               {product}
+     bool ScavengeBeforeFullGC                      = true                                {product}
+     intx ScavengeRootsInCode                       = 2                                   {diagnostic}
+     intx SelfDestructTimer                         = 0                                   {product}
+     bool SerializeVMOutput                         = true                                {diagnostic}
+    ccstr SharedArchiveFile                         =                                     {diagnostic}
+    uintx SharedBaseAddress                         = 34359738368                         {product}
+    ccstr SharedClassListFile                       =                                     {product}
+    uintx SharedMiscCodeSize                        = 122880                              {product}
+    uintx SharedMiscDataSize                        = 4194304                             {product}
+    uintx SharedReadOnlySize                        = 16777216                            {product}
+    uintx SharedReadWriteSize                       = 16777216                            {product}
+     bool ShenandoahAcmpBarrier                     = true                                {diagnostic}
+     bool ShenandoahAllocFailureALot                = false                               {diagnostic}
+     intx ShenandoahAllocationStallThreshold        = 10000                               {diagnostic}
+    uintx ShenandoahAllocationThreshold             = 0                                   {product rw}
+     bool ShenandoahAllocationTrace                 = false                               {diagnostic}
+     bool ShenandoahAllowMixedAllocs                = true                                {diagnostic}
+     bool ShenandoahAlwaysPreTouch                  = false                               {product}
+     bool ShenandoahCASBarrier                      = true                                {diagnostic}
+     bool ShenandoahCloneBarrier                    = true                                {diagnostic}
+     bool ShenandoahCompileCheck                    = false                               {diagnostic}
+     bool ShenandoahDegeneratedGC                   = true                                {diagnostic}
+     bool ShenandoahElasticTLAB                     = true                                {diagnostic}
+    uintx ShenandoahFreeThreshold                   = 10                                  {product rw}
+    uintx ShenandoahFullGCThreshold                 = 3                                   {product rw}
+    ccstr ShenandoahGCHeuristics                    = adaptive                            {product}
+    uintx ShenandoahGarbageThreshold                = 60                                  {product rw}
+    uintx ShenandoahHeapRegionSize                  = 0                                   {product}
+     bool ShenandoahLogDebug                        = false                               {product}
+     bool ShenandoahLogInfo                         = false                               {product}
+     bool ShenandoahLogTrace                        = false                               {product}
+     bool ShenandoahLogWarning                      = false                               {product}
+     bool ShenandoahOOMDuringEvacALot               = false                               {diagnostic}
+     bool ShenandoahOptimizeInstanceFinals          = false                               {product}
+     bool ShenandoahOptimizeStableFinals            = false                               {product}
+     bool ShenandoahOptimizeStaticFinals            = true                                {product}
+     bool ShenandoahReadBarrier                     = true                                {diagnostic}
+    uintx ShenandoahRefProcFrequency                = 5                                   {product}
+     bool ShenandoahRegionSampling                  = false                               {product rw}
+      int ShenandoahRegionSamplingRate              =                     {product rw}
+     bool ShenandoahSATBBarrier                     = true                                {diagnostic}
+     bool ShenandoahStoreCheck                      = false                               {diagnostic}
+     bool ShenandoahTerminationTrace                = false                               {diagnostic}
+    uintx ShenandoahUnloadClassesFrequency          = 5                                   {product}
+     bool ShenandoahVerify                          = false                               {diagnostic}
+     intx ShenandoahVerifyLevel                     = 4                                   {diagnostic}
+     bool ShenandoahWriteBarrier                    = true                                {diagnostic}
+     bool ShenandoahWriteBarrierRB                  = true                                {diagnostic}
+     bool ShowHiddenFrames                          = false                               {diagnostic}
+     bool ShowMessageBoxOnError                     = false                               {product}
+     intx SoftRefLRUPolicyMSPerMB                   = 1000                                {product}
+     bool SpecialEncodeISOArray                     = true                                {C2 product}
+     bool SplitIfBlocks                             = true                                {C2 product}
+     intx StackRedPages                             = 1                                   {pd product}
+     intx StackShadowPages                          = 20                                  {pd product}
+     bool StackTraceInThrowable                     = true                                {product}
+     intx StackYellowPages                          = 2                                   {pd product}
+     bool StartAttachListener                       = false                               {product}
+     intx StarvationMonitorInterval                 = 200                                 {product}
+     bool StressLdcRewrite                          = false                               {product}
+    uintx StringDeduplicationAgeThreshold           = 3                                   {product}
+     bool StringDeduplicationRehashALot             = false                               {diagnostic}
+     bool StringDeduplicationResizeALot             = false                               {diagnostic}
+    uintx StringTableSize                           = 60013                               {product}
+     bool SuppressFatalErrorMessage                 = false                               {product}
+    uintx SurvivorPadding                           = 3                                   {product}
+    uintx SurvivorRatio                             = 8                                   {product}
+     intx SuspendRetryCount                         = 50                                  {product}
+     intx SuspendRetryDelay                         = 5                                   {product}
+     intx SyncFlags                                 = 0                                   {product}
+    ccstr SyncKnobs                                 =                                     {product}
+     intx SyncVerbose                               = 0                                   {product}
+    uintx TLABAllocationWeight                      = 35                                  {product}
+    uintx TLABRefillWasteFraction                   = 64                                  {product}
+    uintx TLABSize                                  = 0                                   {product}
+     bool TLABStats                                 = true                                {product}
+    uintx TLABWasteIncrement                        = 4                                   {product}
+    uintx TLABWasteTargetPercent                    = 1                                   {product}
+    uintx TargetPLABWastePct                        = 10                                  {product}
+    uintx TargetSurvivorRatio                       = 50                                  {product}
+    uintx TenuredGenerationSizeIncrement            = 20                                  {product}
+    uintx TenuredGenerationSizeSupplement           = 80                                  {product}
+    uintx TenuredGenerationSizeSupplementDecay      = 2                                   {product}
+     intx ThreadPriorityPolicy                      = 0                                   {product}
+     bool ThreadPriorityVerbose                     = false                               {product}
+    uintx ThreadSafetyMargin                        = 52428800                            {product}
+     intx ThreadStackSize                           = 1024                                {pd product}
+    uintx ThresholdTolerance                        = 10                                  {product}
+     intx Tier0BackedgeNotifyFreqLog                = 10                                  {product}
+     intx Tier0InvokeNotifyFreqLog                  = 7                                   {product}
+     intx Tier0ProfilingStartPercentage             = 200                                 {product}
+     intx Tier23InlineeNotifyFreqLog                = 20                                  {product}
+     intx Tier2BackEdgeThreshold                    = 0                                   {product}
+     intx Tier2BackedgeNotifyFreqLog                = 14                                  {product}
+     intx Tier2CompileThreshold                     = 0                                   {product}
+     intx Tier2InvokeNotifyFreqLog                  = 11                                  {product}
+     intx Tier3BackEdgeThreshold                    = 60000                               {product}
+     intx Tier3BackedgeNotifyFreqLog                = 13                                  {product}
+     intx Tier3CompileThreshold                     = 2000                                {product}
+     intx Tier3DelayOff                             = 2                                   {product}
+     intx Tier3DelayOn                              = 5                                   {product}
+     intx Tier3InvocationThreshold                  = 200                                 {product}
+     intx Tier3InvokeNotifyFreqLog                  = 10                                  {product}
+     intx Tier3LoadFeedback                         = 5                                   {product}
+     intx Tier3MinInvocationThreshold               = 100                                 {product}
+     intx Tier4BackEdgeThreshold                    = 40000                               {product}
+     intx Tier4CompileThreshold                     = 15000                               {product}
+     intx Tier4InvocationThreshold                  = 5000                                {product}
+     intx Tier4LoadFeedback                         = 3                                   {product}
+     intx Tier4MinInvocationThreshold               = 600                                 {product}
+     bool TieredCompilation                         = true                                {pd product}
+     intx TieredCompileTaskTimeout                  = 50                                  {product}
+     intx TieredRateUpdateMaxTime                   = 25                                  {product}
+     intx TieredRateUpdateMinTime                   = 1                                   {product}
+     intx TieredStopAtLevel                         = 4                                   {product}
+     bool TimeLinearScan                            = false                               {C1 product}
+     bool TraceBiasedLocking                        = false                               {product}
+     bool TraceClassLoading                         = false                               {product rw}
+     bool TraceClassLoadingPreorder                 = false                               {product}
+     bool TraceClassPaths                           = false                               {product}
+     bool TraceClassResolution                      = false                               {product}
+     bool TraceClassUnloading                       = false                               {product rw}
+     bool TraceDynamicGCThreads                     = false                               {product}
+     bool TraceGCTaskThread                         = false                               {diagnostic}
+     bool TraceGen0Time                             = false                               {product}
+     bool TraceGen1Time                             = false                               {product}
+    ccstr TraceJVMTI                                =                                     {product}
+     bool TraceJVMTIObjectTagging                   = false                               {diagnostic}
+     bool TraceLoaderConstraints                    = false                               {product rw}
+     bool TraceMetadataHumongousAllocation          = false                               {product}
+     bool TraceMonitorInflation                     = false                               {product}
+     bool TraceNMethodInstalls                      = false                               {diagnostic}
+     bool TraceParallelOldGCTasks                   = false                               {product}
+     intx TraceRedefineClasses                      = 0                                   {product}
+     bool TraceSafepointCleanupTime                 = false                               {product}
+     bool TraceSuspendWaitFailures                  = false                               {product}
+     bool TraceTypeProfile                          = false                               {C2 diagnostic}
+     intx TrackedInitializationLimit                = 50                                  {C2 product}
+     bool TransmitErrorReport                       = false                               {product}
+     bool TrapBasedNullChecks                       = false                               {pd product}
+     bool TrapBasedRangeChecks                      = false                               {C2 pd product}
+     intx TypeProfileArgsLimit                      = 2                                   {product}
+    uintx TypeProfileLevel                          = 111                                 {pd product}
+     intx TypeProfileMajorReceiverPercent           = 90                                  {C2 product}
+     intx TypeProfileParmsLimit                     = 2                                   {product}
+     intx TypeProfileWidth                          = 2                                   {product}
+     intx UnguardOnExecutionViolation               = 0                                   {product}
+     bool UnlinkSymbolsALot                         = false                               {product}
+     bool UnlockDiagnosticVMOptions                := true                                {diagnostic}
+     bool UnrollLimitCheck                          = true                                {C2 diagnostic}
+     bool UnsyncloadClass                           = false                               {diagnostic}
+     bool Use486InstrsOnly                          = false                               {ARCH product}
+     bool UseAES                                    = true                                {product}
+     bool UseAESIntrinsics                          = true                                {product}
+     intx UseAVX                                    = 2                                   {ARCH product}
+     bool UseAdaptiveGCBoundary                     = false                               {product}
+     bool UseAdaptiveGenerationSizePolicyAtMajorCollection  = true                                {product}
+     bool UseAdaptiveGenerationSizePolicyAtMinorCollection  = true                                {product}
+     bool UseAdaptiveNUMAChunkSizing                = true                                {product}
+     bool UseAdaptiveSizeDecayMajorGCCost           = true                                {product}
+     bool UseAdaptiveSizePolicy                     = true                                {product}
+     bool UseAdaptiveSizePolicyFootprintGoal        = true                                {product}
+     bool UseAdaptiveSizePolicyWithSystemGC         = false                               {product}
+     bool UseAddressNop                             = true                                {ARCH product}
+     bool UseAltSigs                                = false                               {product}
+     bool UseAutoGCSelectPolicy                     = false                               {product}
+     bool UseBMI1Instructions                       = true                                {ARCH product}
+     bool UseBMI2Instructions                       = true                                {ARCH product}
+     bool UseBiasedLocking                          = true                                {product}
+     bool UseBimorphicInlining                      = true                                {C2 product}
+     bool UseBoundThreads                           = true                                {product}
+     bool UseCLMUL                                  = true                                {ARCH product}
+     bool UseCMSBestFit                             = true                                {product}
+     bool UseCMSCollectionPassing                   = true                                {product}
+     bool UseCMSCompactAtFullCollection             = true                                {product}
+     bool UseCMSInitiatingOccupancyOnly             = false                               {product}
+     bool UseCRC32Intrinsics                        = true                                {product}
+     bool UseCodeCacheFlushing                      = true                                {product}
+     bool UseCompiler                               = true                                {product}
+     bool UseCompilerSafepoints                     = true                                {product}
+     bool UseCompressedClassPointers                = false                               {lp64_product}
+     bool UseCompressedOops                        := false                               {lp64_product}
+     bool UseConcMarkSweepGC                        = false                               {product}
+     bool UseCondCardMark                           = false                               {C2 product}
+     bool UseContainerSupport                       = true                                {product}
+     bool UseCountLeadingZerosInstruction           = true                                {ARCH product}
+     bool UseCountTrailingZerosInstruction          = true                                {ARCH product}
+     bool UseCountedLoopSafepoints                  = false                               {C2 product}
+     bool UseCounterDecay                           = true                                {product}
+     bool UseDivMod                                 = true                                {C2 product}
+     bool UseDynamicNumberOfGCThreads               = false                               {product}
+     bool UseFPUForSpilling                         = true                                {C2 product}
+     bool UseFastAccessorMethods                    = false                               {product}
+     bool UseFastEmptyMethods                       = false                               {product}
+     bool UseFastJNIAccessors                       = true                                {product}
+     bool UseFastStosb                              = true                                {ARCH product}
+     bool UseG1GC                                  := true                                {product}
+     bool UseGCLogFileRotation                      = false                               {product}
+     bool UseGCOverheadLimit                        = true                                {product}
+     bool UseGCTaskAffinity                         = false                               {product}
+     bool UseHeavyMonitors                          = false                               {product}
+     bool UseHugeTLBFS                              = false                               {product}
+     bool UseImplicitStableValues                   = true                                {C2 diagnostic}
+     bool UseIncDec                                 = true                                {ARCH diagnostic}
+     bool UseInlineCaches                           = true                                {product}
+     bool UseInlineDepthForSpeculativeTypes         = true                                {C2 diagnostic}
+     bool UseInterpreter                            = true                                {product}
+     bool UseJumpTables                             = true                                {C2 product}
+     bool UseLWPSynchronization                     = true                                {product}
+     bool UseLargePages                             = false                               {pd product}
+     bool UseLargePagesInMetaspace                  = false                               {product}
+     bool UseLargePagesIndividualAllocation         = false                               {pd product}
+     bool UseLinuxPosixThreadCPUClocks              = true                                {product}
+     bool UseLockedTracing                          = false                               {product}
+     bool UseLoopCounter                            = true                                {product}
+     bool UseLoopInvariantCodeMotion                = true                                {C1 product}
+     bool UseLoopPredicate                          = true                                {C2 product}
+     bool UseMathExactIntrinsics                    = true                                {C2 product}
+     bool UseMaximumCompactionOnSystemGC            = true                                {product}
+     bool UseMembar                                 = false                               {pd product}
+     bool UseMontgomeryMultiplyIntrinsic            = true                                {C2 product}
+     bool UseMontgomerySquareIntrinsic              = true                                {C2 product}
+     bool UseMulAddIntrinsic                        = true                                {C2 product}
+     bool UseMultiplyToLenIntrinsic                 = true                                {C2 product}
+     bool UseNUMA                                   = false                               {product}
+     bool UseNUMAInterleaving                       = false                               {product}
+     bool UseNewCode                                = false                               {diagnostic}
+     bool UseNewCode2                               = false                               {diagnostic}
+     bool UseNewCode3                               = false                               {diagnostic}
+     bool UseNewLongLShift                          = false                               {ARCH product}
+     bool UseOSErrorReporting                       = false                               {pd product}
+     bool UseOldInlining                            = true                                {C2 product}
+     bool UseOnStackReplacement                     = true                                {pd product}
+     bool UseOnlyInlinedBimorphic                   = true                                {C2 product}
+     bool UseOprofile                               = false                               {product}
+     bool UseOptoBiasInlining                       = true                                {C2 product}
+     bool UsePSAdaptiveSurvivorSizePolicy           = true                                {product}
+     bool UseParNewGC                               = false                               {product}
+     bool UseParallelGC                             = false                               {product}
+     bool UseParallelOldGC                          = false                               {product}
+     bool UsePerfData                               = true                                {product}
+     bool UsePopCountInstruction                    = true                                {product}
+     bool UseRDPCForConstantTableBase               = false                               {C2 product}
+     bool UseRTMDeopt                               = false                               {ARCH product}
+     bool UseRTMLocking                             = false                               {ARCH product}
+     bool UseSHA                                    = false                               {product}
+     bool UseSHA1Intrinsics                         = false                               {product}
+     bool UseSHA256Intrinsics                       = false                               {product}
+     bool UseSHA512Intrinsics                       = false                               {product}
+     bool UseSHM                                    = false                               {product}
+     intx UseSSE                                    = 4                                   {product}
+     bool UseSSE42Intrinsics                        = true                                {product}
+     bool UseSerialGC                               = false                               {product}
+     bool UseSharedSpaces                           = false                               {product}
+     bool UseShenandoahGC                           = false                               {product}
+     bool UseSignalChaining                         = true                                {product}
+     bool UseSquareToLenIntrinsic                   = true                                {C2 product}
+     bool UseStoreImmI16                            = false                               {ARCH product}
+     bool UseStringDeduplication                    = false                               {product}
+     bool UseSuperWord                              = true                                {C2 product}
+     bool UseTLAB                                   = true                                {pd product}
+     bool UseThreadPriorities                       = true                                {pd product}
+     bool UseTransparentHugePages                   = false                               {product}
+     bool UseTypeProfile                            = true                                {product}
+     bool UseTypeSpeculation                        = true                                {C2 product}
+     bool UseUnalignedLoadStores                    = true                                {ARCH product}
+     bool UseVMInterruptibleIO                      = false                               {product}
+     bool UseXMMForArrayCopy                        = true                                {product}
+     bool UseXmmI2D                                 = false                               {ARCH product}
+     bool UseXmmI2F                                 = false                               {ARCH product}
+     bool UseXmmLoadAndClearUpper                   = true                                {ARCH product}
+     bool UseXmmRegToRegMoveAll                     = true                                {ARCH product}
+     bool VMThreadHintNoPreempt                     = false                               {product}
+     intx VMThreadPriority                          = -1                                  {product}
+     intx VMThreadStackSize                         = 1024                                {pd product}
+     intx ValueMapInitialSize                       = 11                                  {C1 product}
+     intx ValueMapMaxLoopSize                       = 8                                   {C1 product}
+     intx ValueSearchLimit                          = 1000                                {C2 product}
+     bool VerboseVerification                       = false                               {diagnostic}
+     bool VerifyAdapterCalls                        = false                               {diagnostic}
+     bool VerifyAfterGC                             = false                               {diagnostic}
+     bool VerifyBeforeExit                          = false                               {diagnostic}
+     bool VerifyBeforeGC                            = false                               {diagnostic}
+     bool VerifyBeforeIteration                     = false                               {diagnostic}
+     bool VerifyDuringGC                            = false                               {diagnostic}
+     bool VerifyDuringStartup                       = false                               {diagnostic}
+     intx VerifyGCLevel                             = 0                                   {diagnostic}
+    uintx VerifyGCStartAt                           = 0                                   {diagnostic}
+     bool VerifyMergedCPBytecodes                   = true                                {product}
+     bool VerifyMethodHandles                       = false                               {diagnostic}
+     bool VerifyObjectStartArray                    = true                                {diagnostic}
+     bool VerifyRememberedSets                      = false                               {diagnostic}
+     bool VerifySharedSpaces                        = false                               {product}
+     bool VerifySilently                            = false                               {diagnostic}
+     bool VerifyStringTableAtExit                   = false                               {diagnostic}
+ccstrlist VerifySubSet                              =                                     {diagnostic}
+     bool WhiteBoxAPI                               = false                               {diagnostic}
+     intx WorkAroundNPTLTimedWaitHang               = 1                                   {product}
+    uintx YoungGenerationSizeIncrement              = 20                                  {product}
+    uintx YoungGenerationSizeSupplement             = 80                                  {product}
+    uintx YoungGenerationSizeSupplementDecay        = 8                                   {product}
+    uintx YoungPLABSize                             = 4096                                {product}
+     bool ZeroTLAB                                  = false                               {product}
+     intx hashCode                                  = 5                                   {product}
+1,152: [GC pause (G1 Evacuation Pause) (young) 1,153: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 10,00 ms, remaining time: 190,00 ms, target pause time: 200,00 ms]
+ 1,153: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 12 regions, survivors: 0 regions, predicted young region time: 1451,95 ms]
+ 1,153: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 12 regions, survivors: 0 regions, old: 0 regions, predicted pause time: 1461,95 ms, target pause time: 200,00 ms]
+1,165: [SoftReference, 0 refs, 0,0000265 secs]1,165: [WeakReference, 999 refs, 0,0001706 secs]1,165: [FinalReference, 2907 refs, 0,0043758 secs]1,170: [PhantomReference, 0 refs, 0 refs, 0,0000151 secs]1,170: [JNI Weak Reference, 0,0000362 secs], 0,0183568 secs]
+   [Parallel Time: 11,9 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 1152,6, Avg: 1157,5, Max: 1161,0, Diff: 8,4]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 2,7, Diff: 2,7, Sum: 4,4]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,0]
+         [Processed Buffers: Min: 0, Avg: 0,0, Max: 0, Diff: 0, Sum: 0]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,0]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,1, Max: 1,3, Diff: 1,3, Sum: 1,9]
+      [Object Copy (ms): Min: 0,0, Avg: 2,9, Max: 6,3, Diff: 6,3, Sum: 67,0]
+      [Termination (ms): Min: 0,0, Avg: 0,6, Max: 3,8, Diff: 3,8, Sum: 14,1]
+         [Termination Attempts: Min: 1, Avg: 23,2, Max: 42, Diff: 41, Sum: 533]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,3]
+      [GC Worker Total (ms): Min: 0,0, Avg: 3,8, Max: 8,4, Diff: 8,4, Sum: 87,7]
+      [GC Worker End (ms): Min: 1161,0, Avg: 1161,3, Max: 1164,3, Diff: 3,4]
+   [Code Root Fixup: 0,1 ms]
+   [Code Root Purge: 0,1 ms]
+   [Clear CT: 0,3 ms]
+   [Other: 6,0 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 5,3 ms]
+      [Ref Enq: 0,1 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,2 ms]
+   [Eden: 96,0M(96,0M)->0,0B(80,0M) Survivors: 0,0B->16,0M Heap: 96,0M(2048,0M)->10,4M(2048,0M)]
+ [Times: user=0,08 sys=0,00, real=0,02 secs] 
+ 1,564: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: requested by GC cause, GC cause: Metadata GC Threshold]
+ 1,564: [G1Ergonomics (Concurrent Cycles) initiate concurrent cycle, reason: concurrent cycle initiation requested]
+1,564: [GC pause (Metadata GC Threshold) (young) (initial-mark) 1,564: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 13,77 ms, remaining time: 186,23 ms, target pause time: 200,00 ms]
+ 1,564: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 7 regions, survivors: 2 regions, predicted young region time: 249,38 ms]
+ 1,564: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 7 regions, survivors: 2 regions, old: 0 regions, predicted pause time: 263,15 ms, target pause time: 200,00 ms]
+1,572: [SoftReference, 0 refs, 0,0000190 secs]1,572: [WeakReference, 88 refs, 0,0000153 secs]1,572: [FinalReference, 1688 refs, 0,0012568 secs]1,574: [PhantomReference, 0 refs, 1 refs, 0,0000094 secs]1,574: [JNI Weak Reference, 0,0000274 secs], 0,0104113 secs]
+   [Parallel Time: 7,8 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 1564,2, Avg: 1564,7, Max: 1565,3, Diff: 1,1]
+      [Ext Root Scanning (ms): Min: 1,2, Avg: 2,1, Max: 4,4, Diff: 3,2, Sum: 48,3]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,0]
+         [Processed Buffers: Min: 0, Avg: 0,0, Max: 0, Diff: 0, Sum: 0]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,1]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,1, Max: 1,4, Diff: 1,4, Sum: 1,5]
+      [Object Copy (ms): Min: 2,9, Avg: 4,6, Max: 5,3, Diff: 2,4, Sum: 106,5]
+      [Termination (ms): Min: 0,0, Avg: 0,2, Max: 0,2, Diff: 0,2, Sum: 3,5]
+         [Termination Attempts: Min: 1, Avg: 22,9, Max: 34, Diff: 33, Sum: 526]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,4]
+      [GC Worker Total (ms): Min: 6,4, Avg: 7,0, Max: 7,5, Diff: 1,2, Sum: 160,3]
+      [GC Worker End (ms): Min: 1571,7, Avg: 1571,7, Max: 1571,7, Diff: 0,0]
+   [Code Root Fixup: 0,1 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,3 ms]
+   [Other: 2,3 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,7 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,1 ms]
+   [Eden: 56,0M(80,0M)->0,0B(168,0M) Survivors: 16,0M->16,0M Heap: 78,4M(2048,0M)->31,1M(2048,0M)]
+ [Times: user=0,12 sys=0,00, real=0,01 secs] 
+1,575: [GC concurrent-root-region-scan-start]
+1,580: [GC concurrent-root-region-scan-end, 0,0055071 secs]
+1,580: [GC concurrent-mark-start]
+1,581: [GC concurrent-mark-end, 0,0008102 secs]
+1,581: [GC remark 1,581: [Finalize Marking, 0,0012815 secs] 1,582: [GC ref-proc1,582: [SoftReference, 0 refs, 0,0000716 secs]1,583: [WeakReference, 0 refs, 0,0000451 secs]1,583: [FinalReference, 0 refs, 0,0000454 secs]1,583: [PhantomReference, 0 refs, 0 refs, 0,0000919 secs]1,583: [JNI Weak Reference, 0,0000286 secs], 0,0003027 secs] 1,583: [Unloading, 0,0039641 secs], 0,0059355 secs]
+ [Times: user=0,04 sys=0,02, real=0,00 secs] 
+1,587: [GC cleanup 36M->36M(2048M), 0,0025838 secs]
+ [Times: user=0,01 sys=0,00, real=0,01 secs] 
+2,712: [GC pause (G1 Evacuation Pause) (young) 2,712: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 10,74 ms, remaining time: 189,26 ms, target pause time: 200,00 ms]
+ 2,712: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 21 regions, survivors: 2 regions, predicted young region time: 192,59 ms]
+ 2,712: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 21 regions, survivors: 2 regions, old: 0 regions, predicted pause time: 203,33 ms, target pause time: 200,00 ms]
+2,724: [SoftReference, 0 refs, 0,0000347 secs]2,725: [WeakReference, 781 refs, 0,0000973 secs]2,725: [FinalReference, 4466 refs, 0,0045483 secs]2,729: [PhantomReference, 0 refs, 8 refs, 0,0000097 secs]2,729: [JNI Weak Reference, 0,0000270 secs] 2,732: [G1Ergonomics (Mixed GCs) do not start mixed GCs, reason: candidate old regions not available]
+, 0,0202142 secs]
+   [Parallel Time: 12,2 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 2711,9, Avg: 2712,2, Max: 2712,4, Diff: 0,4]
+      [Ext Root Scanning (ms): Min: 0,6, Avg: 1,5, Max: 7,9, Diff: 7,4, Sum: 33,4]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,0]
+         [Processed Buffers: Min: 0, Avg: 0,0, Max: 0, Diff: 0, Sum: 0]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,1]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 3,1, Diff: 3,1, Sum: 3,8]
+      [Object Copy (ms): Min: 3,9, Avg: 10,0, Max: 10,9, Diff: 7,0, Sum: 229,5]
+      [Termination (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,5]
+         [Termination Attempts: Min: 1, Avg: 20,3, Max: 31, Diff: 30, Sum: 468]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,5]
+      [GC Worker Total (ms): Min: 11,5, Avg: 11,6, Max: 11,9, Diff: 0,4, Sum: 267,8]
+      [GC Worker End (ms): Min: 2723,8, Avg: 2723,8, Max: 2723,8, Diff: 0,0]
+   [Code Root Fixup: 0,1 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 1,3 ms]
+   [Other: 6,6 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 5,0 ms]
+      [Ref Enq: 0,2 ms]
+      [Redirty Cards: 0,9 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,2 ms]
+   [Eden: 168,0M(168,0M)->0,0B(240,0M) Survivors: 16,0M->24,0M Heap: 263,1M(2048,0M)->109,6M(2048,0M)]
+ [Times: user=0,27 sys=0,02, real=0,02 secs] 
+ 2,761: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: requested by GC cause, GC cause: Metadata GC Threshold]
+ 2,761: [G1Ergonomics (Concurrent Cycles) initiate concurrent cycle, reason: concurrent cycle initiation requested]
+2,761: [GC pause (Metadata GC Threshold) (young) (initial-mark) 2,761: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 1280, predicted base time: 13,80 ms, remaining time: 186,20 ms, target pause time: 200,00 ms]
+ 2,761: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 2 regions, survivors: 3 regions, predicted young region time: 137,27 ms]
+ 2,761: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 2 regions, survivors: 3 regions, old: 0 regions, predicted pause time: 151,08 ms, target pause time: 200,00 ms]
+2,775: [SoftReference, 0 refs, 0,0000430 secs]2,775: [WeakReference, 200 refs, 0,0000431 secs]2,775: [FinalReference, 627 refs, 0,0003165 secs]2,775: [PhantomReference, 0 refs, 7 refs, 0,0000177 secs]2,775: [JNI Weak Reference, 0,0000339 secs], 0,0161480 secs]
+   [Parallel Time: 12,3 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 2761,4, Avg: 2761,7, Max: 2762,1, Diff: 0,6]
+      [Ext Root Scanning (ms): Min: 1,8, Avg: 2,2, Max: 2,7, Diff: 0,9, Sum: 50,5]
+      [Update RS (ms): Min: 0,0, Avg: 0,1, Max: 0,4, Diff: 0,4, Sum: 1,4]
+         [Processed Buffers: Min: 0, Avg: 0,2, Max: 1, Diff: 1, Sum: 5]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,1]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 4,2, Diff: 4,2, Sum: 4,2]
+      [Object Copy (ms): Min: 5,3, Avg: 9,1, Max: 9,4, Diff: 4,1, Sum: 208,5]
+      [Termination (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 1,1]
+         [Termination Attempts: Min: 1, Avg: 39,8, Max: 56, Diff: 55, Sum: 915]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,5]
+      [GC Worker Total (ms): Min: 11,3, Avg: 11,6, Max: 11,9, Diff: 0,6, Sum: 266,3]
+      [GC Worker End (ms): Min: 2773,3, Avg: 2773,3, Max: 2773,3, Diff: 0,0]
+   [Code Root Fixup: 0,1 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 1,1 ms]
+   [Other: 2,7 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,3 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,9 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,1 ms]
+   [Eden: 16,0M(240,0M)->0,0B(352,0M) Survivors: 24,0M->32,0M Heap: 121,0M(2048,0M)->110,2M(2048,0M)]
+ [Times: user=0,23 sys=0,00, real=0,01 secs] 
+2,778: [GC concurrent-root-region-scan-start]
+2,784: [GC concurrent-root-region-scan-end, 0,0058907 secs]
+2,784: [GC concurrent-mark-start]
+2,784: [GC concurrent-mark-end, 0,0008620 secs]
+2,785: [GC remark 2,785: [Finalize Marking, 0,0009391 secs] 2,786: [GC ref-proc2,786: [SoftReference, 0 refs, 0,0001134 secs]2,786: [WeakReference, 0 refs, 0,0000770 secs]2,786: [FinalReference, 0 refs, 0,0000762 secs]2,786: [PhantomReference, 0 refs, 0 refs, 0,0001468 secs]2,786: [JNI Weak Reference, 0,0000484 secs], 0,0004966 secs] 2,786: [Unloading, 0,0060943 secs], 0,0080847 secs]
+ [Times: user=0,13 sys=0,00, real=0,01 secs] 
+2,793: [GC cleanup 112M->106M(2048M), 0,0027052 secs]
+ [Times: user=0,01 sys=0,00, real=0,00 secs] 
+2,796: [GC concurrent-cleanup-start]
+2,796: [GC concurrent-cleanup-end, 0,0000226 secs]
+3,313: [GC pause (G1 Evacuation Pause) (young) 3,314: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 1536, predicted base time: 11,69 ms, remaining time: 188,31 ms, target pause time: 200,00 ms]
+ 3,314: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 44 regions, survivors: 4 regions, predicted young region time: 256,93 ms]
+ 3,314: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 44 regions, survivors: 4 regions, old: 0 regions, predicted pause time: 268,62 ms, target pause time: 200,00 ms]
+3,327: [SoftReference, 0 refs, 0,0000344 secs]3,327: [WeakReference, 491 refs, 0,0000615 secs]3,328: [FinalReference, 1343 refs, 0,0013269 secs]3,329: [PhantomReference, 0 refs, 24 refs, 0,0000104 secs]3,329: [JNI Weak Reference, 0,0000178 secs] 3,331: [G1Ergonomics (Mixed GCs) do not start mixed GCs, reason: candidate old regions not available]
+, 0,0175817 secs]
+   [Parallel Time: 13,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 3313,6, Avg: 3313,9, Max: 3314,2, Diff: 0,6]
+      [Ext Root Scanning (ms): Min: 0,1, Avg: 0,6, Max: 5,0, Diff: 4,9, Sum: 13,9]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,1]
+         [Processed Buffers: Min: 0, Avg: 0,3, Max: 3, Diff: 3, Sum: 6]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,2]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 2,5, Diff: 2,5, Sum: 5,1]
+      [Object Copy (ms): Min: 8,1, Avg: 11,8, Max: 12,4, Diff: 4,3, Sum: 272,5]
+      [Termination (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 1,0]
+         [Termination Attempts: Min: 1, Avg: 48,7, Max: 63, Diff: 62, Sum: 1121]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,7]
+      [GC Worker Total (ms): Min: 12,5, Avg: 12,8, Max: 13,1, Diff: 0,6, Sum: 293,6]
+      [GC Worker End (ms): Min: 3326,7, Avg: 3326,7, Max: 3326,7, Diff: 0,0]
+   [Code Root Fixup: 0,2 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,9 ms]
+   [Other: 3,1 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,8 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,9 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,2 ms]
+   [Eden: 352,0M(352,0M)->0,0B(1184,0M) Survivors: 32,0M->40,0M Heap: 456,7M(2048,0M)->119,5M(2048,0M)]
+ [Times: user=0,28 sys=0,02, real=0,02 secs] 
+5,915: [GC pause (G1 Evacuation Pause) (young) 5,917: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 8,05 ms, remaining time: 191,95 ms, target pause time: 200,00 ms]
+ 5,917: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 148 regions, survivors: 5 regions, predicted young region time: 157,73 ms]
+ 5,917: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 148 regions, survivors: 5 regions, old: 0 regions, predicted pause time: 165,78 ms, target pause time: 200,00 ms]
+5,944: [SoftReference, 0 refs, 0,0000342 secs]5,944: [WeakReference, 964 refs, 0,0002138 secs]5,944: [FinalReference, 340 refs, 0,0007655 secs]5,945: [PhantomReference, 0 refs, 20 refs, 0,0000179 secs]5,945: [JNI Weak Reference, 0,0000401 secs], 0,0352969 secs]
+   [Parallel Time: 21,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 5917,6, Avg: 5917,9, Max: 5918,4, Diff: 0,8]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 1,3, Max: 7,3, Diff: 7,3, Sum: 29,5]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,0]
+         [Processed Buffers: Min: 0, Avg: 0,0, Max: 0, Diff: 0, Sum: 0]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,7]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,5, Max: 5,9, Diff: 5,9, Sum: 11,4]
+      [Object Copy (ms): Min: 9,7, Avg: 15,9, Max: 19,7, Diff: 9,9, Sum: 364,8]
+      [Termination (ms): Min: 0,0, Avg: 2,6, Max: 3,7, Diff: 3,7, Sum: 60,2]
+         [Termination Attempts: Min: 1, Avg: 50,5, Max: 135, Diff: 134, Sum: 1161]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,6, Diff: 0,6, Sum: 2,3]
+      [GC Worker Total (ms): Min: 19,9, Avg: 20,4, Max: 21,1, Diff: 1,2, Sum: 469,0]
+      [GC Worker End (ms): Min: 5938,1, Avg: 5938,2, Max: 5938,8, Diff: 0,6]
+   [Code Root Fixup: 0,4 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 1,8 ms]
+   [Other: 11,7 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 5,9 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 2,4 ms]
+      [Humongous Register: 1,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1184,0M(1184,0M)->0,0B(464,0M) Survivors: 40,0M->88,0M Heap: 1303,5M(2048,0M)->166,7M(2048,0M)]
+ [Times: user=0,25 sys=0,05, real=0,04 secs] 
+6,072: [GC pause (G1 Evacuation Pause) (young) 6,072: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 10,90 ms, remaining time: 189,10 ms, target pause time: 200,00 ms]
+ 6,072: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 58 regions, survivors: 11 regions, predicted young region time: 352,27 ms]
+ 6,072: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 58 regions, survivors: 11 regions, old: 0 regions, predicted pause time: 363,17 ms, target pause time: 200,00 ms]
+6,110: [SoftReference, 0 refs, 0,0000262 secs]6,110: [WeakReference, 937 refs, 0,0002037 secs]6,111: [FinalReference, 9 refs, 0,0000194 secs]6,111: [PhantomReference, 0 refs, 18 refs, 0,0000117 secs]6,111: [JNI Weak Reference, 0,0000247 secs], 0,0402124 secs]
+   [Parallel Time: 37,6 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 6071,8, Avg: 6073,7, Max: 6075,1, Diff: 3,3]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,8, Max: 16,8, Diff: 16,8, Sum: 18,5]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,0]
+         [Processed Buffers: Min: 0, Avg: 0,0, Max: 0, Diff: 0, Sum: 0]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,2]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,7, Max: 14,2, Diff: 14,2, Sum: 16,5]
+      [Object Copy (ms): Min: 19,0, Avg: 31,2, Max: 34,0, Diff: 15,0, Sum: 718,0]
+      [Termination (ms): Min: 0,0, Avg: 2,4, Max: 2,9, Diff: 2,9, Sum: 54,7]
+         [Termination Attempts: Min: 1, Avg: 9,9, Max: 19, Diff: 18, Sum: 227]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,4]
+      [GC Worker Total (ms): Min: 33,8, Avg: 35,1, Max: 37,1, Diff: 3,3, Sum: 808,3]
+      [GC Worker End (ms): Min: 6108,8, Avg: 6108,9, Max: 6109,2, Diff: 0,4]
+   [Code Root Fixup: 0,3 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,3 ms]
+   [Other: 1,9 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,0 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,3 ms]
+   [Eden: 464,0M(464,0M)->0,0B(1192,0M) Survivors: 88,0M->32,0M Heap: 630,7M(2048,0M)->177,4M(2048,0M)]
+ [Times: user=0,22 sys=0,12, real=0,04 secs] 
+6,405: [GC pause (G1 Evacuation Pause) (young) 6,405: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6152, predicted base time: 16,71 ms, remaining time: 183,29 ms, target pause time: 200,00 ms]
+ 6,405: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 149 regions, survivors: 4 regions, predicted young region time: 336,26 ms]
+ 6,405: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 149 regions, survivors: 4 regions, old: 0 regions, predicted pause time: 352,97 ms, target pause time: 200,00 ms]
+6,428: [SoftReference, 0 refs, 0,0000284 secs]6,428: [WeakReference, 10 refs, 0,0000089 secs]6,428: [FinalReference, 51 refs, 0,0000492 secs]6,428: [PhantomReference, 0 refs, 5 refs, 0,0000082 secs]6,428: [JNI Weak Reference, 0,0000148 secs], 0,0244551 secs]
+   [Parallel Time: 20,7 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 6405,5, Avg: 6409,3, Max: 6420,3, Diff: 14,8]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,5, Max: 1,2, Diff: 1,2, Sum: 11,9]
+      [Update RS (ms): Min: 0,0, Avg: 0,4, Max: 2,2, Diff: 2,2, Sum: 8,5]
+         [Processed Buffers: Min: 0, Avg: 1,9, Max: 9, Diff: 9, Sum: 44]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,4]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,3]
+      [Object Copy (ms): Min: 1,3, Avg: 11,5, Max: 14,6, Diff: 13,3, Sum: 265,1]
+      [Termination (ms): Min: 0,0, Avg: 1,5, Max: 1,6, Diff: 1,6, Sum: 34,0]
+         [Termination Attempts: Min: 1, Avg: 1,4, Max: 4, Diff: 3, Sum: 32]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,4, Max: 2,7, Diff: 2,6, Sum: 9,2]
+      [GC Worker Total (ms): Min: 3,0, Avg: 14,4, Max: 20,2, Diff: 17,1, Sum: 330,4]
+      [GC Worker End (ms): Min: 6423,3, Avg: 6423,7, Max: 6425,9, Diff: 2,6]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,3 ms]
+   [Other: 3,5 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 2,1 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,5 ms]
+      [Humongous Register: 0,2 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,3 ms]
+   [Eden: 1192,0M(1192,0M)->0,0B(400,0M) Survivors: 32,0M->120,0M Heap: 1449,4M(2048,0M)->342,8M(2048,0M)]
+ [Times: user=0,35 sys=0,02, real=0,03 secs] 
+6,491: [GC pause (G1 Evacuation Pause) (young) 6,491: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4618, predicted base time: 14,20 ms, remaining time: 185,80 ms, target pause time: 200,00 ms]
+ 6,491: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 50 regions, survivors: 15 regions, predicted young region time: 244,12 ms]
+ 6,491: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 50 regions, survivors: 15 regions, old: 0 regions, predicted pause time: 258,32 ms, target pause time: 200,00 ms]
+6,528: [SoftReference, 0 refs, 0,0000227 secs]6,528: [WeakReference, 0 refs, 0,0000044 secs]6,528: [FinalReference, 5 refs, 0,0000076 secs]6,528: [PhantomReference, 0 refs, 4 refs, 0,0000100 secs]6,528: [JNI Weak Reference, 0,0000099 secs], 0,0438305 secs]
+   [Parallel Time: 33,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 6490,8, Avg: 6491,3, Max: 6492,0, Diff: 1,2]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,4, Max: 3,0, Diff: 3,0, Sum: 8,4]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,2, Diff: 0,2, Sum: 0,7]
+         [Processed Buffers: Min: 0, Avg: 1,2, Max: 5, Diff: 5, Sum: 27]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,2]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,2, Diff: 0,2, Sum: 0,2]
+      [Object Copy (ms): Min: 20,1, Avg: 22,5, Max: 26,4, Diff: 6,3, Sum: 517,0]
+      [Termination (ms): Min: 0,0, Avg: 3,8, Max: 8,7, Diff: 8,7, Sum: 87,4]
+         [Termination Attempts: Min: 1, Avg: 1,7, Max: 3, Diff: 2, Sum: 38]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,3]
+      [GC Worker Total (ms): Min: 25,7, Avg: 26,7, Max: 31,8, Diff: 6,0, Sum: 614,3]
+      [GC Worker End (ms): Min: 6517,7, Avg: 6518,0, Max: 6522,7, Diff: 4,9]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 5,6 ms]
+   [Other: 4,8 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 4,1 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,2 ms]
+   [Eden: 400,0M(400,0M)->0,0B(1176,0M) Survivors: 120,0M->48,0M Heap: 742,8M(2048,0M)->376,2M(2048,0M)]
+ [Times: user=0,37 sys=0,09, real=0,04 secs] 
+6,819: [GC pause (G1 Evacuation Pause) (young) 6,819: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 7135, predicted base time: 18,02 ms, remaining time: 181,98 ms, target pause time: 200,00 ms]
+ 6,819: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 147 regions, survivors: 6 regions, predicted young region time: 190,46 ms]
+ 6,819: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 147 regions, survivors: 6 regions, old: 0 regions, predicted pause time: 208,47 ms, target pause time: 200,00 ms]
+6,844: [SoftReference, 0 refs, 0,0000332 secs]6,844: [WeakReference, 8 refs, 0,0000123 secs]6,844: [FinalReference, 1 refs, 0,0000133 secs]6,844: [PhantomReference, 0 refs, 4 refs, 0,0000111 secs]6,844: [JNI Weak Reference, 0,0000116 secs], 0,0272700 secs]
+   [Parallel Time: 23,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 6819,5, Avg: 6821,7, Max: 6831,7, Diff: 12,2]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 1,3, Diff: 1,3, Sum: 4,2]
+      [Update RS (ms): Min: 0,0, Avg: 1,1, Max: 6,2, Diff: 6,2, Sum: 25,2]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 8, Diff: 8, Sum: 46]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,7]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,1]
+      [Object Copy (ms): Min: 4,1, Avg: 13,1, Max: 16,0, Diff: 11,9, Sum: 301,4]
+      [Termination (ms): Min: 0,0, Avg: 3,8, Max: 7,0, Diff: 7,0, Sum: 86,6]
+         [Termination Attempts: Min: 1, Avg: 9,0, Max: 16, Diff: 15, Sum: 208]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,5]
+      [GC Worker Total (ms): Min: 8,1, Avg: 18,2, Max: 20,3, Diff: 12,2, Sum: 418,7]
+      [GC Worker End (ms): Min: 6839,7, Avg: 6839,9, Max: 6842,9, Diff: 3,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,9 ms]
+   [Other: 2,9 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,1 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 1,1 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,4 ms]
+   [Eden: 1176,0M(1176,0M)->0,0B(1120,0M) Survivors: 48,0M->104,0M Heap: 1552,2M(2048,0M)->429,7M(2048,0M)]
+ [Times: user=0,32 sys=0,00, real=0,02 secs] 
+7,196: [GC pause (G1 Evacuation Pause) (young) 7,196: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4683, predicted base time: 14,97 ms, remaining time: 185,03 ms, target pause time: 200,00 ms]
+ 7,196: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 140 regions, survivors: 13 regions, predicted young region time: 162,93 ms]
+ 7,196: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 140 regions, survivors: 13 regions, old: 0 regions, predicted pause time: 177,90 ms, target pause time: 200,00 ms]
+7,233: [SoftReference, 0 refs, 0,0000392 secs]7,233: [WeakReference, 7 refs, 0,0000102 secs]7,233: [FinalReference, 9 refs, 0,0004022 secs]7,234: [PhantomReference, 0 refs, 3 refs, 0,0000076 secs]7,234: [JNI Weak Reference, 0,0000091 secs], 0,0393893 secs]
+   [Parallel Time: 36,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 7195,9, Avg: 7201,0, Max: 7211,7, Diff: 15,9]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,4, Max: 4,2, Diff: 4,2, Sum: 9,4]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,2, Diff: 0,2, Sum: 0,8]
+         [Processed Buffers: Min: 0, Avg: 1,5, Max: 14, Diff: 14, Sum: 35]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,8]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,1]
+      [Object Copy (ms): Min: 5,3, Avg: 16,9, Max: 35,3, Diff: 30,1, Sum: 387,8]
+      [Termination (ms): Min: 0,0, Avg: 13,6, Max: 15,0, Diff: 15,0, Sum: 313,1]
+         [Termination Attempts: Min: 1, Avg: 1,0, Max: 1, Diff: 0, Sum: 23]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,3]
+      [GC Worker Total (ms): Min: 20,2, Avg: 31,0, Max: 36,2, Diff: 16,0, Sum: 713,3]
+      [GC Worker End (ms): Min: 7231,9, Avg: 7232,0, Max: 7232,1, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,4 ms]
+   [Other: 2,5 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,3 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,3 ms]
+   [Eden: 1120,0M(1120,0M)->0,0B(1072,0M) Survivors: 104,0M->152,0M Heap: 1549,7M(2048,0M)->496,2M(2048,0M)]
+ [Times: user=0,54 sys=0,03, real=0,04 secs] 
+7,563: [GC pause (G1 Evacuation Pause) (young) 7,564: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4918, predicted base time: 13,62 ms, remaining time: 186,38 ms, target pause time: 200,00 ms]
+ 7,564: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 134 regions, survivors: 19 regions, predicted young region time: 132,73 ms]
+ 7,564: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 134 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 146,35 ms, target pause time: 200,00 ms]
+7,618: [SoftReference, 0 refs, 0,0000314 secs]7,618: [WeakReference, 7 refs, 0,0000113 secs]7,618: [FinalReference, 9 refs, 0,0000252 secs]7,618: [PhantomReference, 0 refs, 3 refs, 0,0000109 secs]7,619: [JNI Weak Reference, 0,0000130 secs], 0,0815388 secs]
+   [Parallel Time: 31,5 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 7563,7, Avg: 7568,5, Max: 7572,3, Diff: 8,6]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 1,2, Diff: 1,2, Sum: 3,9]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,3, Diff: 0,3, Sum: 1,1]
+         [Processed Buffers: Min: 0, Avg: 1,4, Max: 16, Diff: 16, Sum: 32]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,9]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,1]
+      [Object Copy (ms): Min: 11,8, Avg: 15,8, Max: 25,6, Diff: 13,8, Sum: 363,4]
+      [Termination (ms): Min: 0,0, Avg: 8,3, Max: 9,9, Diff: 9,9, Sum: 190,9]
+         [Termination Attempts: Min: 1, Avg: 10,4, Max: 17, Diff: 16, Sum: 239]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,2, Max: 1,3, Diff: 1,3, Sum: 4,2]
+      [GC Worker Total (ms): Min: 20,5, Avg: 24,5, Max: 30,4, Diff: 9,9, Sum: 564,5]
+      [GC Worker End (ms): Min: 7592,8, Avg: 7593,1, Max: 7594,1, Diff: 1,3]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 9,6 ms]
+   [Other: 40,5 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 23,4 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 16,6 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,3 ms]
+   [Eden: 1072,0M(1072,0M)->0,0B(1096,0M) Survivors: 152,0M->128,0M Heap: 1568,2M(2048,0M)->529,6M(2048,0M)]
+ [Times: user=0,52 sys=0,04, real=0,08 secs] 
+8,158: [GC pause (G1 Evacuation Pause) (young) 8,158: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 12085, predicted base time: 37,18 ms, remaining time: 162,82 ms, target pause time: 200,00 ms]
+ 8,158: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 137 regions, survivors: 16 regions, predicted young region time: 121,94 ms]
+ 8,158: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 137 regions, survivors: 16 regions, old: 0 regions, predicted pause time: 159,12 ms, target pause time: 200,00 ms]
+8,255: [SoftReference, 0 refs, 0,0000503 secs]8,255: [WeakReference, 6 refs, 0,0000131 secs]8,255: [FinalReference, 8 refs, 0,0000260 secs]8,255: [PhantomReference, 0 refs, 1 refs, 0,0000092 secs]8,255: [JNI Weak Reference, 0,0000118 secs], 0,1073364 secs]
+   [Parallel Time: 72,0 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 8157,8, Avg: 8173,4, Max: 8193,9, Diff: 36,2]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 1,4, Diff: 1,4, Sum: 3,7]
+      [Update RS (ms): Min: 0,0, Avg: 2,1, Max: 17,8, Diff: 17,8, Sum: 47,8]
+         [Processed Buffers: Min: 0, Avg: 2,7, Max: 13, Diff: 13, Sum: 61]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,7]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,3, Max: 7,9, Diff: 7,9, Sum: 8,0]
+      [Object Copy (ms): Min: 0,0, Avg: 20,2, Max: 53,8, Diff: 53,8, Sum: 463,8]
+      [Termination (ms): Min: 0,0, Avg: 22,4, Max: 28,3, Diff: 28,3, Sum: 515,4]
+         [Termination Attempts: Min: 1, Avg: 11,7, Max: 32, Diff: 31, Sum: 270]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,8, Diff: 0,8, Sum: 1,4]
+      [GC Worker Total (ms): Min: 24,1, Avg: 45,3, Max: 61,7, Diff: 37,6, Sum: 1040,8]
+      [GC Worker End (ms): Min: 8218,0, Avg: 8218,6, Max: 8222,2, Diff: 4,2]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 9,1 ms]
+   [Other: 26,2 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 25,3 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,3 ms]
+   [Eden: 1096,0M(1096,0M)->0,0B(1008,0M) Survivors: 128,0M->144,0M Heap: 1625,6M(2048,0M)->597,6M(2048,0M)]
+ [Times: user=0,71 sys=0,03, real=0,11 secs] 
+8,702: [GC pause (G1 Evacuation Pause) (young) 8,702: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4914, predicted base time: 47,61 ms, remaining time: 152,39 ms, target pause time: 200,00 ms]
+ 8,703: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 126 regions, survivors: 18 regions, predicted young region time: 105,06 ms]
+ 8,703: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 126 regions, survivors: 18 regions, old: 0 regions, predicted pause time: 152,67 ms, target pause time: 200,00 ms]
+8,824: [SoftReference, 0 refs, 0,0000970 secs]8,824: [WeakReference, 6 refs, 0,0000207 secs]8,824: [FinalReference, 6 refs, 0,0000328 secs]8,824: [PhantomReference, 0 refs, 1 refs, 0,0000077 secs]8,824: [JNI Weak Reference, 0,0000122 secs], 0,1234703 secs]
+   [Parallel Time: 66,8 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 8702,6, Avg: 8729,3, Max: 8749,5, Diff: 46,8]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 1,9, Diff: 1,9, Sum: 4,2]
+      [Update RS (ms): Min: 0,0, Avg: 0,0, Max: 0,3, Diff: 0,3, Sum: 0,7]
+         [Processed Buffers: Min: 0, Avg: 1,3, Max: 21, Diff: 21, Sum: 31]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,5]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,1]
+      [Object Copy (ms): Min: 0,0, Avg: 21,2, Max: 45,7, Diff: 45,7, Sum: 487,1]
+      [Termination (ms): Min: 0,0, Avg: 12,0, Max: 15,4, Diff: 15,4, Sum: 276,5]
+         [Termination Attempts: Min: 1, Avg: 5,1, Max: 14, Diff: 13, Sum: 118]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,5, Max: 2,9, Diff: 2,9, Sum: 11,5]
+      [GC Worker Total (ms): Min: 13,2, Avg: 33,9, Max: 60,1, Diff: 46,8, Sum: 780,6]
+      [GC Worker End (ms): Min: 8762,7, Avg: 8763,2, Max: 8765,6, Diff: 2,9]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,9 ms]
+   [Other: 55,7 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 54,8 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,3 ms]
+   [Eden: 1008,0M(1008,0M)->0,0B(1016,0M) Survivors: 144,0M->120,0M Heap: 1605,6M(2048,0M)->622,4M(2048,0M)]
+ [Times: user=0,65 sys=0,02, real=0,12 secs] 
+ 10,236: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: occupancy higher than threshold, occupancy: 989855744 bytes, allocation request: 4194328 bytes, threshold: 751619260 bytes (35,00 %), source: concurrent humongous allocation]
+ 10,236: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: requested by GC cause, GC cause: G1 Humongous Allocation]
+ 10,236: [G1Ergonomics (Concurrent Cycles) initiate concurrent cycle, reason: concurrent cycle initiation requested]
+10,236: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 10,236: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4106, predicted base time: 66,44 ms, remaining time: 133,56 ms, target pause time: 200,00 ms]
+ 10,236: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 94 regions, survivors: 15 regions, predicted young region time: 79,39 ms]
+ 10,236: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 94 regions, survivors: 15 regions, old: 0 regions, predicted pause time: 145,83 ms, target pause time: 200,00 ms]
+10,289: [SoftReference, 0 refs, 0,0000454 secs]10,289: [WeakReference, 13 refs, 0,0000148 secs]10,289: [FinalReference, 80 refs, 0,0002498 secs]10,289: [PhantomReference, 0 refs, 1 refs, 0,0000121 secs]10,289: [JNI Weak Reference, 0,0000151 secs], 0,0585987 secs]
+   [Parallel Time: 29,3 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 10236,7, Avg: 10237,6, Max: 10238,1, Diff: 1,4]
+      [Ext Root Scanning (ms): Min: 0,9, Avg: 7,1, Max: 12,4, Diff: 11,5, Sum: 164,1]
+      [Update RS (ms): Min: 0,0, Avg: 0,5, Max: 9,6, Diff: 9,6, Sum: 11,0]
+         [Processed Buffers: Min: 0, Avg: 1,5, Max: 11, Diff: 11, Sum: 35]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,4]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,1]
+      [Object Copy (ms): Min: 0,0, Avg: 4,3, Max: 24,8, Diff: 24,8, Sum: 98,2]
+      [Termination (ms): Min: 0,0, Avg: 14,3, Max: 15,4, Diff: 15,4, Sum: 329,3]
+         [Termination Attempts: Min: 1, Avg: 1,1, Max: 2, Diff: 1, Sum: 25]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,4, Max: 2,0, Diff: 2,0, Sum: 10,3]
+      [GC Worker Total (ms): Min: 25,7, Avg: 26,7, Max: 29,1, Diff: 3,4, Sum: 613,4]
+      [GC Worker End (ms): Min: 10263,8, Avg: 10264,2, Max: 10265,8, Diff: 2,0]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 5,1 ms]
+   [Other: 24,2 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 23,2 ms]
+      [Ref Enq: 0,0 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,3 ms]
+   [Eden: 752,0M(1016,0M)->0,0B(648,0M) Survivors: 120,0M->96,0M Heap: 1694,4M(2048,0M)->965,3M(2048,0M)]
+ [Times: user=0,32 sys=0,00, real=0,06 secs] 
+10,295: [GC concurrent-root-region-scan-start]
+10,297: [GC concurrent-root-region-scan-end, 0,0015267 secs]
+10,297: [GC concurrent-mark-start]
+10,333: [GC concurrent-mark-end, 0,0363118 secs]
+10,335: [GC remark 10,335: [Finalize Marking, 0,0020982 secs] 10,337: [GC ref-proc10,337: [SoftReference, 0 refs, 0,0001215 secs]10,338: [WeakReference, 1089 refs, 0,0005513 secs]10,338: [FinalReference, 522 refs, 0,0002834 secs]10,338: [PhantomReference, 0 refs, 14 refs, 0,0001638 secs]10,339: [JNI Weak Reference, 0,0000490 secs], 0,0012125 secs] 10,339: [Unloading, 0,0197623 secs], 0,0314891 secs]
+ [Times: user=0,06 sys=0,00, real=0,03 secs] 
+10,367: [GC cleanup 997M->973M(2048M), 0,0090097 secs]
+ [Times: user=0,00 sys=0,01, real=0,01 secs] 
+10,376: [GC concurrent-cleanup-start]
+10,377: [GC concurrent-cleanup-end, 0,0000796 secs]
+11,296: [GC pause (G1 Evacuation Pause) (young) 11,296: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 2476, predicted base time: 60,22 ms, remaining time: 139,78 ms, target pause time: 200,00 ms]
+ 11,296: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 81 regions, survivors: 12 regions, predicted young region time: 46,39 ms]
+ 11,296: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 81 regions, survivors: 12 regions, old: 0 regions, predicted pause time: 106,62 ms, target pause time: 200,00 ms]
+11,309: [SoftReference, 0 refs, 0,0000428 secs]11,309: [WeakReference, 25 refs, 0,0000135 secs]11,309: [FinalReference, 3973 refs, 0,0011243 secs]11,310: [PhantomReference, 0 refs, 1 refs, 0,0000123 secs]11,310: [JNI Weak Reference, 0,0000106 secs] 11,312: [G1Ergonomics (Concurrent Cycles) do not request concurrent cycle initiation, reason: still doing mixed collections, occupancy: 1107296256 bytes, allocation request: 0 bytes, threshold: 751619260 bytes (35,00 %), source: end of GC]
+ 11,312: [G1Ergonomics (Mixed GCs) do not start mixed GCs, reason: reclaimable percentage not over threshold, candidate old regions: 20 regions, reclaimable: 75187928 bytes (3,50 %), threshold: 5,00 %]
+, 0,0163831 secs]
+   [Parallel Time: 12,3 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 11296,0, Avg: 11298,6, Max: 11304,1, Diff: 8,2]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 1,3, Diff: 1,3, Sum: 4,9]
+      [Update RS (ms): Min: 0,0, Avg: 0,1, Max: 0,3, Diff: 0,3, Sum: 1,6]
+         [Processed Buffers: Min: 0, Avg: 1,0, Max: 6, Diff: 6, Sum: 24]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,3]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,2, Diff: 0,2, Sum: 0,8]
+      [Object Copy (ms): Min: 0,0, Avg: 4,9, Max: 11,0, Diff: 11,0, Sum: 112,6]
+      [Termination (ms): Min: 0,0, Avg: 4,1, Max: 4,9, Diff: 4,9, Sum: 94,8]
+         [Termination Attempts: Min: 1, Avg: 1,0, Max: 1, Diff: 0, Sum: 23]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,4]
+      [GC Worker Total (ms): Min: 3,8, Avg: 9,4, Max: 12,0, Diff: 8,2, Sum: 215,6]
+      [GC Worker End (ms): Min: 11307,9, Avg: 11307,9, Max: 11308,0, Diff: 0,0]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,8 ms]
+   [Other: 3,3 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,9 ms]
+      [Ref Enq: 0,1 ms]
+      [Redirty Cards: 0,9 ms]
+      [Humongous Register: 0,0 ms]
+      [Humongous Reclaim: 0,1 ms]
+      [Free CSet: 0,2 ms]
+   [Eden: 648,0M(648,0M)->0,0B(704,0M) Survivors: 96,0M->24,0M Heap: 1601,3M(2048,0M)->954,7M(2048,0M)]
+ [Times: user=0,24 sys=0,00, real=0,02 secs] 
+11,672: [GC pause (GCLocker Initiated GC) (young) 11,672: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4653, predicted base time: 49,06 ms, remaining time: 150,94 ms, target pause time: 200,00 ms]
+ 11,672: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 89 regions, survivors: 3 regions, predicted young region time: 24,18 ms]
+ 11,672: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 89 regions, survivors: 3 regions, old: 0 regions, predicted pause time: 73,23 ms, target pause time: 200,00 ms]
+11,677: [SoftReference, 0 refs, 0,0000194 secs]11,677: [WeakReference, 20 refs, 0,0000099 secs]11,677: [FinalReference, 4049 refs, 0,0009023 secs]11,678: [PhantomReference, 0 refs, 0 refs, 0,0000080 secs]11,678: [JNI Weak Reference, 0,0000084 secs] 11,681: [G1Ergonomics (Heap Sizing) attempt heap expansion, reason: recent GC overhead higher than threshold after GC, recent GC overhead: 10,47 %, threshold: 10,00 %, uncommitted: 39728447488 bytes, calculated expansion amount: 7945689497 bytes (20,00 %)]
+ 11,681: [G1Ergonomics (Heap Sizing) expand the heap, requested expansion amount: 2147483648 bytes, attempted expansion amount: 2147483648 bytes]
+, 0,0132659 secs]
+   [Parallel Time: 5,1 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 11672,0, Avg: 11672,4, Max: 11672,8, Diff: 0,8]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,3, Max: 1,4, Diff: 1,4, Sum: 7,4]
+      [Update RS (ms): Min: 0,0, Avg: 0,2, Max: 0,7, Diff: 0,7, Sum: 4,5]
+         [Processed Buffers: Min: 0, Avg: 1,3, Max: 4, Diff: 4, Sum: 30]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,3]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,4, Diff: 0,4, Sum: 0,5]
+      [Object Copy (ms): Min: 0,0, Avg: 1,8, Max: 2,4, Diff: 2,4, Sum: 42,5]
+      [Termination (ms): Min: 0,0, Avg: 1,8, Max: 2,1, Diff: 2,1, Sum: 42,1]
+         [Termination Attempts: Min: 1, Avg: 13,9, Max: 27, Diff: 26, Sum: 319]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,2, Max: 4,0, Diff: 4,0, Sum: 4,5]
+      [GC Worker Total (ms): Min: 4,0, Avg: 4,4, Max: 4,8, Diff: 0,8, Sum: 101,9]
+      [GC Worker End (ms): Min: 11676,8, Avg: 11676,8, Max: 11676,8, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 1,3 ms]
+   [Other: 6,9 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,3 ms]
+      [Ref Enq: 0,1 ms]
+      [Redirty Cards: 1,3 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,2 ms]
+   [Eden: 712,0M(704,0M)->0,0B(2432,0M) Survivors: 24,0M->24,0M Heap: 1661,8M(2048,0M)->950,9M(4096,0M)]
+ [Times: user=0,13 sys=0,01, real=0,01 secs] 
+16,243: [GC pause (GCLocker Initiated GC) (young) 16,243: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 10417, predicted base time: 40,93 ms, remaining time: 159,07 ms, target pause time: 200,00 ms]
+ 16,243: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 305 regions, survivors: 3 regions, predicted young region time: 30,64 ms]
+ 16,243: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 305 regions, survivors: 3 regions, old: 0 regions, predicted pause time: 71,56 ms, target pause time: 200,00 ms]
+16,302: [SoftReference, 0 refs, 0,0000612 secs]16,302: [WeakReference, 24 refs, 0,0000185 secs]16,302: [FinalReference, 15142 refs, 0,0170048 secs]16,320: [PhantomReference, 0 refs, 6 refs, 0,0000836 secs]16,320: [JNI Weak Reference, 0,0000385 secs], 0,0847447 secs]
+   [Parallel Time: 57,8 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 16243,7, Avg: 16243,9, Max: 16244,0, Diff: 0,3]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,3, Max: 3,6, Diff: 3,6, Sum: 7,0]
+      [Update RS (ms): Min: 0,0, Avg: 0,7, Max: 0,8, Diff: 0,8, Sum: 15,1]
+         [Processed Buffers: Min: 0, Avg: 3,0, Max: 6, Diff: 6, Sum: 70]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 2,1]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,1, Max: 1,0, Diff: 1,0, Sum: 1,9]
+      [Object Copy (ms): Min: 7,3, Avg: 9,9, Max: 13,2, Diff: 5,9, Sum: 228,1]
+      [Termination (ms): Min: 0,0, Avg: 13,1, Max: 46,9, Diff: 46,9, Sum: 301,4]
+         [Termination Attempts: Min: 1, Avg: 17,5, Max: 51, Diff: 50, Sum: 402]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,0, Sum: 0,6]
+      [GC Worker Total (ms): Min: 14,2, Avg: 24,2, Max: 57,3, Diff: 43,1, Sum: 556,2]
+      [GC Worker End (ms): Min: 16258,1, Avg: 16268,0, Max: 16301,3, Diff: 43,2]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,1 ms]
+   [Clear CT: 6,2 ms]
+   [Other: 20,6 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 18,3 ms]
+      [Ref Enq: 0,6 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,1 ms]
+      [Free CSet: 0,8 ms]
+   [Eden: 2440,0M(2432,0M)->0,0B(2016,0M) Survivors: 24,0M->152,0M Heap: 3537,0M(4096,0M)->1226,0M(4096,0M)]
+ [Times: user=0,28 sys=0,00, real=0,09 secs] 
+18,642: [GC pause (G1 Evacuation Pause) (young) 18,642: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 10368, predicted base time: 50,34 ms, remaining time: 149,66 ms, target pause time: 200,00 ms]
+ 18,642: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 252 regions, survivors: 19 regions, predicted young region time: 61,49 ms]
+ 18,642: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 252 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 111,83 ms, target pause time: 200,00 ms]
+18,667: [SoftReference, 0 refs, 0,0000360 secs]18,667: [WeakReference, 44 refs, 0,0000177 secs]18,667: [FinalReference, 7193 refs, 0,0013665 secs]18,668: [PhantomReference, 0 refs, 5 refs, 0,0000176 secs]18,669: [JNI Weak Reference, 0,0000102 secs], 0,0284212 secs]
+   [Parallel Time: 24,8 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 18641,9, Avg: 18643,0, Max: 18645,0, Diff: 3,1]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 1,8, Max: 24,5, Diff: 24,5, Sum: 41,4]
+      [Update RS (ms): Min: 0,0, Avg: 0,7, Max: 1,3, Diff: 1,3, Sum: 15,9]
+         [Processed Buffers: Min: 0, Avg: 2,4, Max: 7, Diff: 7, Sum: 55]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,4, Diff: 0,4, Sum: 3,3]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,1, Max: 2,9, Diff: 2,9, Sum: 2,9]
+      [Object Copy (ms): Min: 0,0, Avg: 8,4, Max: 10,3, Diff: 10,3, Sum: 192,9]
+      [Termination (ms): Min: 0,0, Avg: 12,4, Max: 13,4, Diff: 13,4, Sum: 284,4]
+         [Termination Attempts: Min: 1, Avg: 2,0, Max: 5, Diff: 4, Sum: 47]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,8]
+      [GC Worker Total (ms): Min: 21,5, Avg: 23,5, Max: 24,6, Diff: 3,1, Sum: 541,6]
+      [GC Worker End (ms): Min: 18666,5, Avg: 18666,5, Max: 18666,6, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,6 ms]
+   [Other: 2,9 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 1,8 ms]
+      [Ref Enq: 0,1 ms]
+      [Redirty Cards: 0,2 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,1 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 2016,0M(2016,0M)->0,0B(2128,0M) Survivors: 152,0M->144,0M Heap: 3286,0M(4096,0M)->1193,7M(4096,0M)]
+ [Times: user=0,51 sys=0,02, real=0,03 secs] 
+20,865: [GC pause (G1 Evacuation Pause) (young) 20,865: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4651, predicted base time: 39,99 ms, remaining time: 160,01 ms, target pause time: 200,00 ms]
+ 20,865: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 266 regions, survivors: 18 regions, predicted young region time: 53,84 ms]
+ 20,865: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 266 regions, survivors: 18 regions, old: 0 regions, predicted pause time: 93,83 ms, target pause time: 200,00 ms]
+20,923: [SoftReference, 0 refs, 0,0000299 secs]20,923: [WeakReference, 37 refs, 0,0000303 secs]20,923: [FinalReference, 14698 refs, 0,0142527 secs]20,938: [PhantomReference, 0 refs, 7 refs, 0,0000209 secs]20,938: [JNI Weak Reference, 0,0000150 secs], 0,0936359 secs]
+   [Parallel Time: 56,2 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 20865,4, Avg: 20874,9, Max: 20880,0, Diff: 14,6]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 3,7, Diff: 3,7, Sum: 4,1]
+      [Update RS (ms): Min: 0,0, Avg: 0,5, Max: 9,6, Diff: 9,6, Sum: 12,1]
+         [Processed Buffers: Min: 0, Avg: 1,8, Max: 10, Diff: 10, Sum: 42]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,1, Sum: 1,4]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,1, Max: 2,1, Diff: 2,1, Sum: 2,2]
+      [Object Copy (ms): Min: 7,0, Avg: 12,3, Max: 25,7, Diff: 18,7, Sum: 283,7]
+      [Termination (ms): Min: 0,0, Avg: 14,5, Max: 27,4, Diff: 27,4, Sum: 333,7]
+         [Termination Attempts: Min: 1, Avg: 5,6, Max: 14, Diff: 13, Sum: 128]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,5, Max: 6,8, Diff: 6,8, Sum: 12,5]
+      [GC Worker Total (ms): Min: 18,2, Avg: 28,2, Max: 42,6, Diff: 24,4, Sum: 649,7]
+      [GC Worker End (ms): Min: 20897,9, Avg: 20903,2, Max: 20914,4, Diff: 16,5]
+   [Code Root Fixup: 0,1 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 19,1 ms]
+   [Other: 18,2 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 15,9 ms]
+      [Ref Enq: 0,4 ms]
+      [Redirty Cards: 0,5 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,1 ms]
+      [Free CSet: 1,0 ms]
+   [Eden: 2128,0M(2128,0M)->0,0B(2048,0M) Survivors: 144,0M->184,0M Heap: 3333,7M(4096,0M)->1232,3M(4096,0M)]
+ [Times: user=0,33 sys=0,00, real=0,10 secs] 
+24,308: [GC pause (G1 Evacuation Pause) (young) 24,308: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 5959, predicted base time: 51,77 ms, remaining time: 148,23 ms, target pause time: 200,00 ms]
+ 24,308: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 256 regions, survivors: 23 regions, predicted young region time: 46,38 ms]
+ 24,308: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 256 regions, survivors: 23 regions, old: 0 regions, predicted pause time: 98,15 ms, target pause time: 200,00 ms]
+24,365: [SoftReference, 0 refs, 0,0000474 secs]24,365: [WeakReference, 17 refs, 0,0000183 secs]24,365: [FinalReference, 16689 refs, 0,0114167 secs]24,377: [PhantomReference, 0 refs, 9 refs, 0,0000707 secs]24,377: [JNI Weak Reference, 0,0000388 secs], 0,0723834 secs]
+   [Parallel Time: 42,3 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 24308,6, Avg: 24320,6, Max: 24327,6, Diff: 19,0]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 4,2, Diff: 4,2, Sum: 4,6]
+      [Update RS (ms): Min: 0,0, Avg: 0,1, Max: 0,8, Diff: 0,8, Sum: 2,9]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 15, Diff: 15, Sum: 45]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,3, Diff: 0,3, Sum: 1,8]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 1,0, Max: 12,5, Diff: 12,5, Sum: 23,3]
+      [Object Copy (ms): Min: 11,6, Avg: 18,0, Max: 26,2, Diff: 14,6, Sum: 412,9]
+      [Termination (ms): Min: 0,0, Avg: 5,9, Max: 11,6, Diff: 11,6, Sum: 136,6]
+         [Termination Attempts: Min: 1, Avg: 1,9, Max: 7, Diff: 6, Sum: 43]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,6]
+      [GC Worker Total (ms): Min: 17,6, Avg: 25,3, Max: 42,0, Diff: 24,5, Sum: 582,7]
+      [GC Worker End (ms): Min: 24345,2, Avg: 24346,0, Max: 24350,8, Diff: 5,6]
+   [Code Root Fixup: 0,1 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,9 ms]
+   [Other: 29,1 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 26,1 ms]
+      [Ref Enq: 0,4 ms]
+      [Redirty Cards: 1,3 ms]
+      [Humongous Register: 0,2 ms]
+      [Humongous Reclaim: 0,1 ms]
+      [Free CSet: 0,7 ms]
+   [Eden: 2048,0M(2048,0M)->0,0B(2048,0M) Survivors: 184,0M->120,0M Heap: 3312,3M(4096,0M)->1295,9M(4096,0M)]
+ [Times: user=0,58 sys=0,01, real=0,08 secs] 
+27,613: [GC pause (G1 Evacuation Pause) (young) 27,613: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6693, predicted base time: 52,36 ms, remaining time: 147,64 ms, target pause time: 200,00 ms]
+ 27,613: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 256 regions, survivors: 15 regions, predicted young region time: 38,83 ms]
+ 27,613: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 256 regions, survivors: 15 regions, old: 0 regions, predicted pause time: 91,19 ms, target pause time: 200,00 ms]
+27,689: [SoftReference, 0 refs, 0,0000395 secs]27,689: [WeakReference, 6 refs, 0,0000126 secs]27,689: [FinalReference, 21265 refs, 0,0189654 secs]27,708: [PhantomReference, 7 refs, 7 refs, 0,0000256 secs]27,708: [JNI Weak Reference, 0,0000139 secs], 0,1202281 secs]
+   [Parallel Time: 51,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 27614,0, Avg: 27630,5, Max: 27642,7, Diff: 28,7]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 3,7, Diff: 3,7, Sum: 4,0]
+      [Update RS (ms): Min: 0,0, Avg: 3,0, Max: 24,5, Diff: 24,5, Sum: 69,6]
+         [Processed Buffers: Min: 0, Avg: 2,1, Max: 19, Diff: 19, Sum: 48]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,3, Diff: 0,2, Sum: 1,1]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,4, Diff: 0,4, Sum: 0,4]
+      [Object Copy (ms): Min: 0,5, Avg: 12,2, Max: 28,5, Diff: 28,0, Sum: 280,6]
+      [Termination (ms): Min: 0,0, Avg: 7,4, Max: 9,9, Diff: 9,9, Sum: 171,1]
+         [Termination Attempts: Min: 1, Avg: 42,2, Max: 88, Diff: 87, Sum: 971]
+      [GC Worker Other (ms): Min: 0,0, Avg: 3,4, Max: 11,3, Diff: 11,2, Sum: 78,6]
+      [GC Worker Total (ms): Min: 10,6, Avg: 26,3, Max: 43,9, Diff: 33,2, Sum: 605,4]
+      [GC Worker End (ms): Min: 27653,3, Avg: 27656,9, Max: 27664,6, Diff: 11,2]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 11,2 ms]
+   [Other: 57,6 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 43,7 ms]
+      [Ref Enq: 0,8 ms]
+      [Redirty Cards: 11,9 ms]
+      [Humongous Register: 0,2 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,7 ms]
+   [Eden: 2048,0M(2048,0M)->0,0B(1936,0M) Survivors: 120,0M->176,0M Heap: 3343,9M(4096,0M)->1347,8M(4096,0M)]
+ [Times: user=0,52 sys=0,01, real=0,12 secs] 
+29,567: [GC pause (G1 Evacuation Pause) (young) 29,567: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6142, predicted base time: 73,25 ms, remaining time: 126,75 ms, target pause time: 200,00 ms]
+ 29,567: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 242 regions, survivors: 22 regions, predicted young region time: 39,65 ms]
+ 29,567: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 242 regions, survivors: 22 regions, old: 0 regions, predicted pause time: 112,90 ms, target pause time: 200,00 ms]
+29,615: [SoftReference, 0 refs, 0,0000387 secs]29,615: [WeakReference, 0 refs, 0,0000059 secs]29,615: [FinalReference, 17607 refs, 0,0061579 secs]29,621: [PhantomReference, 0 refs, 7 refs, 0,0000098 secs]29,621: [JNI Weak Reference, 0,0000069 secs], 0,0557086 secs]
+   [Parallel Time: 47,1 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 29567,1, Avg: 29567,4, Max: 29568,1, Diff: 1,0]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,3, Max: 2,8, Diff: 2,8, Sum: 7,1]
+      [Update RS (ms): Min: 0,0, Avg: 0,8, Max: 4,0, Diff: 4,0, Sum: 17,4]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 12, Diff: 12, Sum: 45]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,3]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 1,0, Diff: 1,0, Sum: 1,1]
+      [Object Copy (ms): Min: 27,9, Avg: 32,0, Max: 35,8, Diff: 7,9, Sum: 736,1]
+      [Termination (ms): Min: 10,5, Avg: 13,3, Max: 14,6, Diff: 4,1, Sum: 306,1]
+         [Termination Attempts: Min: 517, Avg: 642,9, Max: 732, Diff: 215, Sum: 14787]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,5]
+      [GC Worker Total (ms): Min: 45,9, Avg: 46,6, Max: 46,9, Diff: 1,0, Sum: 1070,7]
+      [GC Worker End (ms): Min: 29613,9, Avg: 29614,0, Max: 29614,0, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,5 ms]
+   [Other: 8,1 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 6,7 ms]
+      [Ref Enq: 0,2 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 1936,0M(1936,0M)->0,0B(1928,0M) Survivors: 176,0M->160,0M Heap: 3283,8M(4096,0M)->1371,6M(4096,0M)]
+ [Times: user=0,81 sys=0,13, real=0,06 secs] 
+31,681: [GC pause (G1 Evacuation Pause) (young) 31,682: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6598, predicted base time: 59,64 ms, remaining time: 140,36 ms, target pause time: 200,00 ms]
+ 31,682: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 241 regions, survivors: 20 regions, predicted young region time: 39,48 ms]
+ 31,682: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 241 regions, survivors: 20 regions, old: 0 regions, predicted pause time: 99,12 ms, target pause time: 200,00 ms]
+31,707: [SoftReference, 0 refs, 0,0000537 secs]31,707: [WeakReference, 9 refs, 0,0000109 secs]31,707: [FinalReference, 16363 refs, 0,0070708 secs]31,714: [PhantomReference, 0 refs, 6 refs, 0,0000235 secs]31,714: [JNI Weak Reference, 0,0000123 secs], 0,0351999 secs]
+   [Parallel Time: 24,0 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 31682,0, Avg: 31689,6, Max: 31697,1, Diff: 15,1]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,7, Max: 10,5, Diff: 10,5, Sum: 15,8]
+      [Update RS (ms): Min: 0,0, Avg: 0,3, Max: 1,1, Diff: 1,1, Sum: 6,0]
+         [Processed Buffers: Min: 0, Avg: 2,3, Max: 11, Diff: 11, Sum: 53]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,4]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,4, Diff: 0,4, Sum: 0,6]
+      [Object Copy (ms): Min: 0,1, Avg: 7,4, Max: 21,6, Diff: 21,5, Sum: 171,2]
+      [Termination (ms): Min: 0,0, Avg: 7,7, Max: 8,6, Diff: 8,6, Sum: 176,1]
+         [Termination Attempts: Min: 1, Avg: 2,8, Max: 6, Diff: 5, Sum: 65]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,5]
+      [GC Worker Total (ms): Min: 8,7, Avg: 16,2, Max: 23,8, Diff: 15,2, Sum: 372,5]
+      [GC Worker End (ms): Min: 31705,8, Avg: 31705,8, Max: 31705,9, Diff: 0,2]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,9 ms]
+   [Other: 10,2 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 7,9 ms]
+      [Ref Enq: 0,4 ms]
+      [Redirty Cards: 0,8 ms]
+      [Humongous Register: 0,3 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1928,0M(1928,0M)->0,0B(1896,0M) Survivors: 160,0M->176,0M Heap: 3299,6M(4096,0M)->1387,6M(4096,0M)]
+ [Times: user=0,35 sys=0,01, real=0,03 secs] 
+33,506: [GC pause (G1 Evacuation Pause) (young) 33,506: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6135, predicted base time: 50,42 ms, remaining time: 149,58 ms, target pause time: 200,00 ms]
+ 33,506: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 237 regions, survivors: 22 regions, predicted young region time: 32,01 ms]
+ 33,506: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 237 regions, survivors: 22 regions, old: 0 regions, predicted pause time: 82,43 ms, target pause time: 200,00 ms]
+33,569: [SoftReference, 0 refs, 0,0000395 secs]33,569: [WeakReference, 7 refs, 0,0000143 secs]33,569: [FinalReference, 15621 refs, 0,0082144 secs]33,577: [PhantomReference, 2 refs, 6 refs, 0,0000158 secs]33,577: [JNI Weak Reference, 0,0000101 secs], 0,0728905 secs]
+   [Parallel Time: 34,7 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 33506,3, Avg: 33513,6, Max: 33525,7, Diff: 19,4]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,3, Max: 2,8, Diff: 2,8, Sum: 7,0]
+      [Update RS (ms): Min: 0,0, Avg: 0,9, Max: 15,6, Diff: 15,6, Sum: 20,9]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 12, Diff: 12, Sum: 47]
+      [Scan RS (ms): Min: 0,0, Avg: 0,2, Max: 2,1, Diff: 2,1, Sum: 3,5]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 5,3, Diff: 5,3, Sum: 5,6]
+      [Object Copy (ms): Min: 0,0, Avg: 11,3, Max: 24,2, Diff: 24,2, Sum: 260,9]
+      [Termination (ms): Min: 0,0, Avg: 6,0, Max: 12,3, Diff: 12,3, Sum: 137,9]
+         [Termination Attempts: Min: 1, Avg: 25,2, Max: 84, Diff: 83, Sum: 579]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,5]
+      [GC Worker Total (ms): Min: 6,3, Avg: 19,0, Max: 25,8, Diff: 19,5, Sum: 436,3]
+      [GC Worker End (ms): Min: 33532,0, Avg: 33532,6, Max: 33537,7, Diff: 5,7]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,5 ms]
+   [Other: 37,6 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 36,0 ms]
+      [Ref Enq: 0,3 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1896,0M(1896,0M)->0,0B(1944,0M) Survivors: 176,0M->152,0M Heap: 3283,6M(4096,0M)->1364,0M(4096,0M)]
+ [Times: user=0,38 sys=0,01, real=0,08 secs] 
+35,260: [GC pause (G1 Evacuation Pause) (young) 35,261: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4851, predicted base time: 53,82 ms, remaining time: 146,18 ms, target pause time: 200,00 ms]
+ 35,261: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 243 regions, survivors: 19 regions, predicted young region time: 27,88 ms]
+ 35,261: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 243 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 81,70 ms, target pause time: 200,00 ms]
+35,291: [SoftReference, 0 refs, 0,0000375 secs]35,291: [WeakReference, 5 refs, 0,0000105 secs]35,291: [FinalReference, 17106 refs, 0,0086667 secs]35,300: [PhantomReference, 0 refs, 6 refs, 0,0000144 secs]35,300: [JNI Weak Reference, 0,0000117 secs], 0,0415563 secs]
+   [Parallel Time: 24,1 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 35260,9, Avg: 35269,1, Max: 35282,2, Diff: 21,3]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,5, Max: 3,6, Diff: 3,6, Sum: 12,5]
+      [Update RS (ms): Min: 0,0, Avg: 0,2, Max: 1,0, Diff: 1,0, Sum: 4,0]
+         [Processed Buffers: Min: 0, Avg: 1,7, Max: 10, Diff: 10, Sum: 40]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,4]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,2, Diff: 0,2, Sum: 0,3]
+      [Object Copy (ms): Min: 0,0, Avg: 12,2, Max: 20,4, Diff: 20,4, Sum: 281,0]
+      [Termination (ms): Min: 0,2, Avg: 2,5, Max: 2,9, Diff: 2,7, Sum: 57,3]
+         [Termination Attempts: Min: 1, Avg: 94,7, Max: 166, Diff: 165, Sum: 2179]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,6]
+      [GC Worker Total (ms): Min: 2,3, Avg: 15,5, Max: 23,9, Diff: 21,5, Sum: 357,1]
+      [GC Worker End (ms): Min: 35284,6, Avg: 35284,6, Max: 35284,8, Diff: 0,2]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,9 ms]
+   [Other: 16,6 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 14,7 ms]
+      [Ref Enq: 0,4 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,3 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1944,0M(1944,0M)->0,0B(1944,0M) Survivors: 152,0M->152,0M Heap: 3308,0M(4096,0M)->1361,5M(4096,0M)]
+ [Times: user=0,38 sys=0,01, real=0,04 secs] 
+37,044: [GC pause (G1 Evacuation Pause) (young) 37,044: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4085, predicted base time: 47,44 ms, remaining time: 152,56 ms, target pause time: 200,00 ms]
+ 37,044: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 243 regions, survivors: 19 regions, predicted young region time: 24,50 ms]
+ 37,044: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 243 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 71,94 ms, target pause time: 200,00 ms]
+37,100: [SoftReference, 0 refs, 0,0000447 secs]37,100: [WeakReference, 6 refs, 0,0000143 secs]37,100: [FinalReference, 17688 refs, 0,0246081 secs]37,125: [PhantomReference, 0 refs, 6 refs, 0,0000736 secs]37,125: [JNI Weak Reference, 0,0000569 secs], 0,0839488 secs]
+   [Parallel Time: 27,5 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 37044,0, Avg: 37046,5, Max: 37056,5, Diff: 12,5]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,8, Max: 12,3, Diff: 12,3, Sum: 17,3]
+      [Update RS (ms): Min: 0,0, Avg: 0,8, Max: 7,7, Diff: 7,7, Sum: 18,0]
+         [Processed Buffers: Min: 0, Avg: 1,7, Max: 10, Diff: 10, Sum: 40]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 2,1]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,7, Diff: 0,7, Sum: 0,8]
+      [Object Copy (ms): Min: 6,1, Avg: 15,5, Max: 24,7, Diff: 18,6, Sum: 357,5]
+      [Termination (ms): Min: 0,0, Avg: 5,6, Max: 7,8, Diff: 7,8, Sum: 129,9]
+         [Termination Attempts: Min: 1, Avg: 36,0, Max: 76, Diff: 75, Sum: 828]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,7]
+      [GC Worker Total (ms): Min: 12,8, Avg: 22,9, Max: 26,5, Diff: 13,8, Sum: 527,4]
+      [GC Worker End (ms): Min: 37069,3, Avg: 37069,4, Max: 37070,7, Diff: 1,4]
+   [Code Root Fixup: 0,2 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,8 ms]
+   [Other: 55,4 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 53,4 ms]
+      [Ref Enq: 0,5 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,2 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1944,0M(1944,0M)->0,0B(1928,0M) Survivors: 152,0M->160,0M Heap: 3305,5M(4096,0M)->1369,6M(4096,0M)]
+ [Times: user=0,38 sys=0,08, real=0,08 secs] 
+38,844: [GC pause (G1 Evacuation Pause) (young) 38,844: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 5097, predicted base time: 54,57 ms, remaining time: 145,43 ms, target pause time: 200,00 ms]
+ 38,844: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 241 regions, survivors: 20 regions, predicted young region time: 23,55 ms]
+ 38,844: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 241 regions, survivors: 20 regions, old: 0 regions, predicted pause time: 78,11 ms, target pause time: 200,00 ms]
+38,871: [SoftReference, 0 refs, 0,0000265 secs]38,871: [WeakReference, 5 refs, 0,0000075 secs]38,872: [FinalReference, 17581 refs, 0,0058992 secs]38,877: [PhantomReference, 0 refs, 6 refs, 0,0000112 secs]38,877: [JNI Weak Reference, 0,0000123 secs], 0,0354171 secs]
+   [Parallel Time: 20,0 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 38851,0, Avg: 38855,8, Max: 38864,1, Diff: 13,1]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,6, Max: 6,7, Diff: 6,6, Sum: 14,4]
+      [Update RS (ms): Min: 0,0, Avg: 0,2, Max: 0,8, Diff: 0,8, Sum: 3,8]
+         [Processed Buffers: Min: 0, Avg: 1,9, Max: 11, Diff: 11, Sum: 43]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,3]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,6, Diff: 0,6, Sum: 0,6]
+      [Object Copy (ms): Min: 6,3, Avg: 14,0, Max: 18,3, Diff: 12,0, Sum: 321,3]
+      [Termination (ms): Min: 0,1, Avg: 0,2, Max: 0,4, Diff: 0,3, Sum: 4,7]
+         [Termination Attempts: Min: 43, Avg: 82,3, Max: 108, Diff: 65, Sum: 1892]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,6]
+      [GC Worker Total (ms): Min: 6,8, Avg: 15,1, Max: 19,9, Diff: 13,1, Sum: 347,8]
+      [GC Worker End (ms): Min: 38870,9, Avg: 38870,9, Max: 38871,0, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,9 ms]
+   [Other: 14,4 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 6,4 ms]
+      [Ref Enq: 0,3 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 6,5 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 1928,0M(1928,0M)->0,0B(1944,0M) Survivors: 160,0M->152,0M Heap: 3297,6M(4096,0M)->1361,4M(4096,0M)]
+ [Times: user=0,34 sys=0,01, real=0,04 secs] 
+40,996: [GC pause (G1 Evacuation Pause) (young) 40,996: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6148, predicted base time: 47,05 ms, remaining time: 152,95 ms, target pause time: 200,00 ms]
+ 40,996: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 243 regions, survivors: 19 regions, predicted young region time: 21,82 ms]
+ 40,996: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 243 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 68,87 ms, target pause time: 200,00 ms]
+41,083: [SoftReference, 0 refs, 0,0000402 secs]41,083: [WeakReference, 17 refs, 0,0000194 secs]41,083: [FinalReference, 17812 refs, 0,0107601 secs]41,093: [PhantomReference, 0 refs, 5 refs, 0,0000193 secs]41,093: [JNI Weak Reference, 0,0000130 secs], 0,0997295 secs]
+   [Parallel Time: 63,1 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 40995,9, Avg: 40996,6, Max: 40997,4, Diff: 1,5]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,6, Max: 9,7, Diff: 9,7, Sum: 14,2]
+      [Update RS (ms): Min: 0,0, Avg: 0,3, Max: 1,3, Diff: 1,3, Sum: 6,9]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 12, Diff: 12, Sum: 45]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,4]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,5, Diff: 0,5, Sum: 0,5]
+      [Object Copy (ms): Min: 14,3, Avg: 23,1, Max: 41,5, Diff: 27,3, Sum: 531,2]
+      [Termination (ms): Min: 9,5, Avg: 28,9, Max: 41,2, Diff: 31,7, Sum: 664,2]
+         [Termination Attempts: Min: 54, Avg: 258,1, Max: 503, Diff: 449, Sum: 5937]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,0, Diff: 0,0, Sum: 0,5]
+      [GC Worker Total (ms): Min: 51,4, Avg: 53,0, Max: 61,8, Diff: 10,4, Sum: 1218,8]
+      [GC Worker End (ms): Min: 41048,7, Avg: 41049,6, Max: 41057,7, Diff: 9,0]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,5 ms]
+   [Other: 36,0 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 34,4 ms]
+      [Ref Enq: 0,4 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1944,0M(1944,0M)->0,0B(1944,0M) Survivors: 152,0M->152,0M Heap: 3305,4M(4096,0M)->1363,4M(4096,0M)]
+ [Times: user=0,66 sys=0,07, real=0,10 secs] 
+42,831: [GC pause (G1 Evacuation Pause) (young) 42,831: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 5862, predicted base time: 48,53 ms, remaining time: 151,47 ms, target pause time: 200,00 ms]
+ 42,831: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 243 regions, survivors: 19 regions, predicted young region time: 24,16 ms]
+ 42,831: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 243 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 72,70 ms, target pause time: 200,00 ms]
+42,879: [SoftReference, 0 refs, 0,0000389 secs]42,879: [WeakReference, 6 refs, 0,0000107 secs]42,879: [FinalReference, 18060 refs, 0,0073144 secs]42,887: [PhantomReference, 0 refs, 7 refs, 0,0000126 secs]42,887: [JNI Weak Reference, 0,0000140 secs], 0,0572651 secs]
+   [Parallel Time: 38,9 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 42833,1, Avg: 42846,2, Max: 42856,7, Diff: 23,6]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 2,3, Diff: 2,3, Sum: 5,7]
+      [Update RS (ms): Min: 0,0, Avg: 0,2, Max: 1,4, Diff: 1,4, Sum: 3,7]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 23, Diff: 23, Sum: 47]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,3]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,4, Diff: 0,4, Sum: 0,4]
+      [Object Copy (ms): Min: 0,0, Avg: 10,2, Max: 31,8, Diff: 31,8, Sum: 234,7]
+      [Termination (ms): Min: 0,0, Avg: 10,6, Max: 14,6, Diff: 14,6, Sum: 244,2]
+         [Termination Attempts: Min: 1, Avg: 12,3, Max: 51, Diff: 50, Sum: 282]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,7, Diff: 0,6, Sum: 2,2]
+      [GC Worker Total (ms): Min: 10,4, Avg: 21,4, Max: 37,4, Diff: 27,0, Sum: 492,2]
+      [GC Worker End (ms): Min: 42867,1, Avg: 42867,6, Max: 42871,7, Diff: 4,7]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,5 ms]
+   [Other: 17,9 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 14,6 ms]
+      [Ref Enq: 0,3 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 1,8 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 1944,0M(1944,0M)->0,0B(1944,0M) Survivors: 152,0M->152,0M Heap: 3307,4M(4096,0M)->1366,1M(4096,0M)]
+ [Times: user=0,30 sys=0,01, real=0,05 secs] 
+44,703: [GC pause (G1 Evacuation Pause) (young) 44,703: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4060, predicted base time: 45,68 ms, remaining time: 154,32 ms, target pause time: 200,00 ms]
+ 44,703: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 243 regions, survivors: 19 regions, predicted young region time: 21,25 ms]
+ 44,703: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 243 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 66,93 ms, target pause time: 200,00 ms]
+44,725: [SoftReference, 0 refs, 0,0000250 secs]44,725: [WeakReference, 7 refs, 0,0000078 secs]44,725: [FinalReference, 18265 refs, 0,0084311 secs]44,734: [PhantomReference, 0 refs, 6 refs, 0,0000236 secs]44,734: [JNI Weak Reference, 0,0000087 secs], 0,0331943 secs]
+   [Parallel Time: 21,9 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 44703,0, Avg: 44712,8, Max: 44724,1, Diff: 21,1]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,2, Max: 2,2, Diff: 2,2, Sum: 5,6]
+      [Update RS (ms): Min: 0,0, Avg: 0,1, Max: 0,9, Diff: 0,9, Sum: 2,8]
+         [Processed Buffers: Min: 0, Avg: 1,7, Max: 17, Diff: 17, Sum: 38]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 1,0]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,4, Diff: 0,4, Sum: 0,5]
+      [Object Copy (ms): Min: 0,0, Avg: 10,4, Max: 19,5, Diff: 19,5, Sum: 238,2]
+      [Termination (ms): Min: 0,0, Avg: 0,6, Max: 1,1, Diff: 1,1, Sum: 12,7]
+         [Termination Attempts: Min: 1, Avg: 138,1, Max: 225, Diff: 224, Sum: 3176]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,9]
+      [GC Worker Total (ms): Min: 0,0, Avg: 11,4, Max: 21,2, Diff: 21,2, Sum: 261,7]
+      [GC Worker End (ms): Min: 44724,1, Avg: 44724,2, Max: 44724,7, Diff: 0,6]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,5 ms]
+   [Other: 10,8 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 9,1 ms]
+      [Ref Enq: 0,3 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 1944,0M(1944,0M)->0,0B(1944,0M) Survivors: 152,0M->152,0M Heap: 3310,1M(4096,0M)->1366,3M(4096,0M)]
+ [Times: user=0,27 sys=0,00, real=0,03 secs] 
+47,757: [GC pause (G1 Evacuation Pause) (young) 47,758: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 4815, predicted base time: 40,34 ms, remaining time: 159,66 ms, target pause time: 200,00 ms]
+ 47,758: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 243 regions, survivors: 19 regions, predicted young region time: 19,81 ms]
+ 47,758: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 243 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 60,15 ms, target pause time: 200,00 ms]
+47,777: [SoftReference, 0 refs, 0,0000343 secs]47,777: [WeakReference, 7 refs, 0,0000091 secs]47,777: [FinalReference, 17650 refs, 0,0060318 secs]47,783: [PhantomReference, 0 refs, 7 refs, 0,0000121 secs]47,783: [JNI Weak Reference, 0,0000096 secs], 0,0276879 secs]
+   [Parallel Time: 18,8 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 47758,0, Avg: 47758,4, Max: 47758,7, Diff: 0,7]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,4, Max: 6,1, Diff: 6,1, Sum: 10,3]
+      [Update RS (ms): Min: 0,0, Avg: 2,4, Max: 5,0, Diff: 5,0, Sum: 56,2]
+         [Processed Buffers: Min: 0, Avg: 1,8, Max: 9, Diff: 9, Sum: 41]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,2, Diff: 0,2, Sum: 1,0]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,7, Diff: 0,7, Sum: 0,8]
+      [Object Copy (ms): Min: 10,0, Avg: 13,3, Max: 15,8, Diff: 5,9, Sum: 304,8]
+      [Termination (ms): Min: 0,0, Avg: 1,9, Max: 2,5, Diff: 2,5, Sum: 44,7]
+         [Termination Attempts: Min: 1, Avg: 3,4, Max: 10, Diff: 9, Sum: 78]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 1,0]
+      [GC Worker Total (ms): Min: 17,9, Avg: 18,2, Max: 18,6, Diff: 0,7, Sum: 418,8]
+      [GC Worker End (ms): Min: 47776,6, Avg: 47776,6, Max: 47776,7, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,6 ms]
+   [Other: 8,3 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 6,5 ms]
+      [Ref Enq: 0,3 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 0,3 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1944,0M(1944,0M)->0,0B(1928,0M) Survivors: 152,0M->160,0M Heap: 3310,3M(4096,0M)->1373,4M(4096,0M)]
+ [Times: user=0,21 sys=0,05, real=0,03 secs] 
+49,584: [GC pause (G1 Evacuation Pause) (young) 49,584: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6362, predicted base time: 35,12 ms, remaining time: 164,88 ms, target pause time: 200,00 ms]
+ 49,584: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 241 regions, survivors: 20 regions, predicted young region time: 18,93 ms]
+ 49,584: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 241 regions, survivors: 20 regions, old: 0 regions, predicted pause time: 54,06 ms, target pause time: 200,00 ms]
+49,633: [SoftReference, 0 refs, 0,0000284 secs]49,633: [WeakReference, 8 refs, 0,0000112 secs]49,633: [FinalReference, 17677 refs, 0,0071767 secs]49,641: [PhantomReference, 0 refs, 7 refs, 0,0000185 secs]49,641: [JNI Weak Reference, 0,0000107 secs], 0,0583385 secs]
+   [Parallel Time: 39,0 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 49585,0, Avg: 49592,9, Max: 49603,9, Diff: 18,8]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,8, Max: 11,9, Diff: 11,9, Sum: 18,7]
+      [Update RS (ms): Min: 0,0, Avg: 0,7, Max: 7,2, Diff: 7,2, Sum: 17,1]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 10, Diff: 10, Sum: 47]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,1, Sum: 1,7]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,8, Diff: 0,8, Sum: 0,9]
+      [Object Copy (ms): Min: 3,1, Avg: 15,5, Max: 27,3, Diff: 24,2, Sum: 356,6]
+      [Termination (ms): Min: 2,6, Avg: 7,6, Max: 11,2, Diff: 8,6, Sum: 174,1]
+         [Termination Attempts: Min: 1, Avg: 240,9, Max: 473, Diff: 472, Sum: 5541]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,9]
+      [GC Worker Total (ms): Min: 13,4, Avg: 24,8, Max: 35,6, Diff: 22,2, Sum: 570,0]
+      [GC Worker End (ms): Min: 49617,3, Avg: 49617,6, Max: 49620,7, Diff: 3,4]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,5 ms]
+   [Other: 18,7 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 16,7 ms]
+      [Ref Enq: 0,3 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 0,6 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 1928,0M(1928,0M)->0,0B(1928,0M) Survivors: 160,0M->160,0M Heap: 3301,4M(4096,0M)->1369,7M(4096,0M)]
+ [Times: user=0,40 sys=0,03, real=0,06 secs] 
+51,530: [GC pause (G1 Evacuation Pause) (young) 51,530: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 5086, predicted base time: 35,87 ms, remaining time: 164,13 ms, target pause time: 200,00 ms]
+ 51,530: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 241 regions, survivors: 20 regions, predicted young region time: 17,93 ms]
+ 51,530: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 241 regions, survivors: 20 regions, old: 0 regions, predicted pause time: 53,80 ms, target pause time: 200,00 ms]
+51,566: [SoftReference, 0 refs, 0,0000277 secs]51,566: [WeakReference, 6 refs, 0,0000088 secs]51,566: [FinalReference, 17735 refs, 0,0096863 secs]51,576: [PhantomReference, 2 refs, 7 refs, 0,0000139 secs]51,576: [JNI Weak Reference, 0,0000107 secs], 0,0474102 secs]
+   [Parallel Time: 31,8 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 51530,5, Avg: 51531,7, Max: 51533,0, Diff: 2,5]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,3, Max: 4,1, Diff: 4,1, Sum: 7,1]
+      [Update RS (ms): Min: 0,0, Avg: 2,8, Max: 7,3, Diff: 7,3, Sum: 65,2]
+         [Processed Buffers: Min: 0, Avg: 1,8, Max: 5, Diff: 5, Sum: 41]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,4]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,8, Diff: 0,8, Sum: 0,8]
+      [Object Copy (ms): Min: 10,7, Avg: 15,7, Max: 27,3, Diff: 16,6, Sum: 361,2]
+      [Termination (ms): Min: 0,0, Avg: 10,4, Max: 12,8, Diff: 12,8, Sum: 239,5]
+         [Termination Attempts: Min: 1, Avg: 1,0, Max: 2, Diff: 1, Sum: 24]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,8]
+      [GC Worker Total (ms): Min: 28,0, Avg: 29,4, Max: 31,1, Diff: 3,1, Sum: 675,9]
+      [GC Worker End (ms): Min: 51561,0, Avg: 51561,1, Max: 51562,1, Diff: 1,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,5 ms]
+   [Other: 15,1 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 13,5 ms]
+      [Ref Enq: 0,4 ms]
+      [Redirty Cards: 0,3 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,6 ms]
+   [Eden: 1928,0M(1928,0M)->0,0B(1928,0M) Survivors: 160,0M->160,0M Heap: 3297,7M(4096,0M)->1371,6M(4096,0M)]
+ [Times: user=0,41 sys=0,01, real=0,04 secs] 
+53,365: [GC pause (G1 Evacuation Pause) (young) 53,365: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6366, predicted base time: 33,23 ms, remaining time: 166,77 ms, target pause time: 200,00 ms]
+ 53,365: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 241 regions, survivors: 20 regions, predicted young region time: 18,07 ms]
+ 53,365: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 241 regions, survivors: 20 regions, old: 0 regions, predicted pause time: 51,30 ms, target pause time: 200,00 ms]
+53,399: [SoftReference, 0 refs, 0,0000266 secs]53,399: [WeakReference, 6 refs, 0,0000097 secs]53,399: [FinalReference, 17835 refs, 0,0076143 secs]53,407: [PhantomReference, 0 refs, 8 refs, 0,0000126 secs]53,407: [JNI Weak Reference, 0,0000106 secs], 0,0431382 secs]
+   [Parallel Time: 27,1 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 53365,7, Avg: 53378,8, Max: 53388,1, Diff: 22,4]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,3, Max: 2,5, Diff: 2,5, Sum: 6,2]
+      [Update RS (ms): Min: 0,0, Avg: 0,2, Max: 1,9, Diff: 1,9, Sum: 4,9]
+         [Processed Buffers: Min: 0, Avg: 2,1, Max: 15, Diff: 15, Sum: 49]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 1,0]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,7, Diff: 0,7, Sum: 0,8]
+      [Object Copy (ms): Min: 0,0, Avg: 8,7, Max: 21,2, Diff: 21,2, Sum: 200,4]
+      [Termination (ms): Min: 0,0, Avg: 4,6, Max: 4,9, Diff: 4,9, Sum: 105,6]
+         [Termination Attempts: Min: 1, Avg: 50,2, Max: 146, Diff: 145, Sum: 1155]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,0, Max: 0,1, Diff: 0,1, Sum: 0,5]
+      [GC Worker Total (ms): Min: 4,5, Avg: 13,9, Max: 27,0, Diff: 22,4, Sum: 319,3]
+      [GC Worker End (ms): Min: 53392,6, Avg: 53392,6, Max: 53392,7, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,4 ms]
+   [Other: 15,6 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 13,8 ms]
+      [Ref Enq: 0,3 ms]
+      [Redirty Cards: 0,5 ms]
+      [Humongous Register: 0,2 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 1928,0M(1928,0M)->0,0B(1944,0M) Survivors: 160,0M->152,0M Heap: 3299,6M(4096,0M)->1365,7M(4096,0M)]
+ [Times: user=0,35 sys=0,01, real=0,04 secs] 
+55,235: [GC pause (G1 Evacuation Pause) (young) 55,235: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 3801, predicted base time: 32,21 ms, remaining time: 167,79 ms, target pause time: 200,00 ms]
+ 55,235: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 243 regions, survivors: 19 regions, predicted young region time: 16,23 ms]
+ 55,235: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 243 regions, survivors: 19 regions, old: 0 regions, predicted pause time: 48,44 ms, target pause time: 200,00 ms]
+55,252: [SoftReference, 0 refs, 0,0000472 secs]55,252: [WeakReference, 9 refs, 0,0000082 secs]55,252: [FinalReference, 18208 refs, 0,0062456 secs]55,258: [PhantomReference, 6 refs, 7 refs, 0,0000220 secs]55,258: [JNI Weak Reference, 0,0000136 secs] 55,262: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: occupancy higher than threshold, occupancy: 1526726656 bytes, allocation request: 0 bytes, threshold: 1503238520 bytes (35,00 %), source: end of GC]
+, 0,0266540 secs]
+   [Parallel Time: 15,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 55235,8, Avg: 55236,1, Max: 55236,4, Diff: 0,7]
+      [Ext Root Scanning (ms): Min: 0,2, Avg: 0,9, Max: 10,0, Diff: 9,9, Sum: 21,7]
+      [Update RS (ms): Min: 0,0, Avg: 0,4, Max: 1,5, Diff: 1,5, Sum: 8,5]
+         [Processed Buffers: Min: 0, Avg: 1,6, Max: 7, Diff: 7, Sum: 36]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,6]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,1, Max: 1,2, Diff: 1,2, Sum: 1,3]
+      [Object Copy (ms): Min: 4,9, Avg: 13,3, Max: 14,2, Diff: 9,3, Sum: 305,9]
+      [Termination (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 2,2]
+         [Termination Attempts: Min: 1, Avg: 61,4, Max: 83, Diff: 82, Sum: 1412]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,5]
+      [GC Worker Total (ms): Min: 14,6, Avg: 14,9, Max: 15,2, Diff: 0,7, Sum: 342,5]
+      [GC Worker End (ms): Min: 55251,0, Avg: 55251,0, Max: 55251,1, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,7 ms]
+   [Other: 10,5 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 6,7 ms]
+      [Ref Enq: 0,5 ms]
+      [Redirty Cards: 1,0 ms]
+      [Humongous Register: 0,4 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 1,5 ms]
+   [Eden: 1944,0M(1944,0M)->0,0B(1952,0M) Survivors: 152,0M->136,0M Heap: 3309,7M(4096,0M)->1376,2M(4096,0M)]
+ [Times: user=0,33 sys=0,01, real=0,03 secs] 
+ 57,053: [G1Ergonomics (Concurrent Cycles) initiate concurrent cycle, reason: concurrent cycle initiation requested]
+57,053: [GC pause (G1 Evacuation Pause) (young) (initial-mark) 57,053: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6623, predicted base time: 28,38 ms, remaining time: 171,62 ms, target pause time: 200,00 ms]
+ 57,053: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 244 regions, survivors: 17 regions, predicted young region time: 15,32 ms]
+ 57,053: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 244 regions, survivors: 17 regions, old: 0 regions, predicted pause time: 43,70 ms, target pause time: 200,00 ms]
+57,071: [SoftReference, 0 refs, 0,0000236 secs]57,071: [WeakReference, 7 refs, 0,0000065 secs]57,071: [FinalReference, 17997 refs, 0,0068481 secs]57,078: [PhantomReference, 2 refs, 3 refs, 0,0000090 secs]57,078: [JNI Weak Reference, 0,0000076 secs], 0,0274194 secs]
+   [Parallel Time: 17,8 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 57053,3, Avg: 57053,5, Max: 57053,7, Diff: 0,5]
+      [Ext Root Scanning (ms): Min: 2,1, Avg: 2,3, Max: 2,7, Diff: 0,6, Sum: 53,7]
+      [Update RS (ms): Min: 0,0, Avg: 1,8, Max: 7,6, Diff: 7,6, Sum: 41,0]
+         [Processed Buffers: Min: 0, Avg: 2,1, Max: 7, Diff: 7, Sum: 48]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,2, Diff: 0,2, Sum: 1,5]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,3, Diff: 0,3, Sum: 0,6]
+      [Object Copy (ms): Min: 7,3, Avg: 13,0, Max: 14,9, Diff: 7,6, Sum: 299,9]
+      [Termination (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,3]
+         [Termination Attempts: Min: 1, Avg: 49,5, Max: 72, Diff: 71, Sum: 1138]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,1, Max: 0,1, Diff: 0,1, Sum: 1,7]
+      [GC Worker Total (ms): Min: 17,1, Avg: 17,4, Max: 17,6, Diff: 0,5, Sum: 399,7]
+      [GC Worker End (ms): Min: 57070,8, Avg: 57070,9, Max: 57070,9, Diff: 0,1]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 0,6 ms]
+   [Other: 9,0 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 7,2 ms]
+      [Ref Enq: 0,2 ms]
+      [Redirty Cards: 0,7 ms]
+      [Humongous Register: 0,1 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,5 ms]
+   [Eden: 1952,0M(1952,0M)->0,0B(2008,0M) Survivors: 136,0M->96,0M Heap: 3328,2M(4096,0M)->1365,9M(4096,0M)]
+ [Times: user=0,31 sys=0,02, real=0,03 secs] 
+57,080: [GC concurrent-root-region-scan-start]
+57,087: [GC concurrent-root-region-scan-end, 0,0064179 secs]
+57,087: [GC concurrent-mark-start]
+57,111: [GC concurrent-mark-end, 0,0243527 secs]
+57,111: [GC remark 57,112: [Finalize Marking, 0,0006720 secs] 57,112: [GC ref-proc57,112: [SoftReference, 0 refs, 0,0000736 secs]57,112: [WeakReference, 1071 refs, 0,0003550 secs]57,113: [FinalReference, 562 refs, 0,0001835 secs]57,113: [PhantomReference, 0 refs, 15 refs, 0,0000992 secs]57,113: [JNI Weak Reference, 0,0000302 secs], 0,0007651 secs] 57,113: [Unloading, 0,0081315 secs], 0,0111885 secs]
+ [Times: user=0,14 sys=0,05, real=0,01 secs] 
+57,123: [GC cleanup 1461M->1461M(4096M), 0,0021900 secs]
+ [Times: user=0,02 sys=0,00, real=0,00 secs] 
+59,274: [GC pause (G1 Evacuation Pause) (young) 59,274: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6443, predicted base time: 25,10 ms, remaining time: 174,90 ms, target pause time: 200,00 ms]
+ 59,274: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 251 regions, survivors: 12 regions, predicted young region time: 15,68 ms]
+ 59,274: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 251 regions, survivors: 12 regions, old: 0 regions, predicted pause time: 40,78 ms, target pause time: 200,00 ms]
+59,345: [SoftReference, 0 refs, 0,0000401 secs]59,345: [WeakReference, 7 refs, 0,0000138 secs]59,345: [FinalReference, 18652 refs, 0,0119874 secs]59,357: [PhantomReference, 0 refs, 2 refs, 0,0000275 secs]59,357: [JNI Weak Reference, 0,0000202 secs] 59,361: [G1Ergonomics (Concurrent Cycles) do not request concurrent cycle initiation, reason: still doing mixed collections, occupancy: 1551892480 bytes, allocation request: 0 bytes, threshold: 1503238520 bytes (35,00 %), source: end of GC]
+ 59,361: [G1Ergonomics (Mixed GCs) do not start mixed GCs, reason: reclaimable percentage not over threshold, candidate old regions: 31 regions, reclaimable: 99090456 bytes (2,31 %), threshold: 5,00 %]
+, 0,0868382 secs]
+   [Parallel Time: 42,4 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 59275,1, Avg: 59280,8, Max: 59291,8, Diff: 16,8]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,4, Max: 3,5, Diff: 3,5, Sum: 10,3]
+      [Update RS (ms): Min: 0,0, Avg: 1,2, Max: 14,9, Diff: 14,9, Sum: 26,6]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 9, Diff: 9, Sum: 46]
+      [Scan RS (ms): Min: 0,0, Avg: 0,1, Max: 0,3, Diff: 0,2, Sum: 1,9]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,7, Diff: 0,7, Sum: 0,8]
+      [Object Copy (ms): Min: 3,0, Avg: 14,0, Max: 28,1, Diff: 25,1, Sum: 322,1]
+      [Termination (ms): Min: 0,4, Avg: 11,2, Max: 13,8, Diff: 13,5, Sum: 258,3]
+         [Termination Attempts: Min: 32, Avg: 126,3, Max: 184, Diff: 152, Sum: 2905]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,2, Max: 0,3, Diff: 0,3, Sum: 3,9]
+      [GC Worker Total (ms): Min: 16,0, Avg: 27,1, Max: 32,8, Diff: 16,8, Sum: 624,0]
+      [GC Worker End (ms): Min: 59307,8, Avg: 59307,9, Max: 59308,1, Diff: 0,3]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 1,3 ms]
+   [Other: 43,2 ms]
+      [Choose CSet: 0,1 ms]
+      [Ref Proc: 40,1 ms]
+      [Ref Enq: 0,7 ms]
+      [Redirty Cards: 0,5 ms]
+      [Humongous Register: 0,3 ms]
+      [Humongous Reclaim: 0,0 ms]
+      [Free CSet: 0,9 ms]
+   [Eden: 2008,0M(2008,0M)->0,0B(2040,0M) Survivors: 96,0M->72,0M Heap: 3373,9M(4096,0M)->1337,6M(4096,0M)]
+ [Times: user=0,65 sys=0,01, real=0,09 secs] 
+61,216: [GC pause (G1 Evacuation Pause) (young) 61,216: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 6338, predicted base time: 41,09 ms, remaining time: 158,91 ms, target pause time: 200,00 ms]
+ 61,216: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 255 regions, survivors: 9 regions, predicted young region time: 22,30 ms]
+ 61,216: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 255 regions, survivors: 9 regions, old: 0 regions, predicted pause time: 63,38 ms, target pause time: 200,00 ms]
+61,263: [SoftReference, 0 refs, 0,0000533 secs]61,263: [WeakReference, 5 refs, 0,0000188 secs]61,263: [FinalReference, 17686 refs, 0,0121670 secs]61,275: [PhantomReference, 0 refs, 2 refs, 0,0000223 secs]61,275: [JNI Weak Reference, 0,0000244 secs] 61,287: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: occupancy higher than threshold, occupancy: 1551892480 bytes, allocation request: 0 bytes, threshold: 1503238520 bytes (35,00 %), source: end of GC]
+, 0,0717144 secs]
+   [Parallel Time: 22,7 ms, GC Workers: 23]
+      [GC Worker Start (ms): Min: 61216,5, Avg: 61222,4, Max: 61227,4, Diff: 10,9]
+      [Ext Root Scanning (ms): Min: 0,0, Avg: 0,4, Max: 6,0, Diff: 6,0, Sum: 9,1]
+      [Update RS (ms): Min: 0,0, Avg: 0,2, Max: 1,7, Diff: 1,7, Sum: 4,3]
+         [Processed Buffers: Min: 0, Avg: 2,0, Max: 14, Diff: 14, Sum: 45]
+      [Scan RS (ms): Min: 0,0, Avg: 0,0, Max: 0,2, Diff: 0,1, Sum: 1,1]
+      [Code Root Scanning (ms): Min: 0,0, Avg: 0,0, Max: 0,3, Diff: 0,3, Sum: 0,3]
+      [Object Copy (ms): Min: 5,7, Avg: 10,2, Max: 13,6, Diff: 7,9, Sum: 234,6]
+      [Termination (ms): Min: 0,2, Avg: 0,8, Max: 1,3, Diff: 1,1, Sum: 19,5]
+         [Termination Attempts: Min: 3, Avg: 127,0, Max: 180, Diff: 177, Sum: 2920]
+      [GC Worker Other (ms): Min: 0,0, Avg: 0,5, Max: 4,9, Diff: 4,9, Sum: 11,2]
+      [GC Worker Total (ms): Min: 6,8, Avg: 12,2, Max: 19,6, Diff: 12,8, Sum: 280,2]
+      [GC Worker End (ms): Min: 61234,1, Avg: 61234,6, Max: 61239,1, Diff: 4,9]
+   [Code Root Fixup: 0,0 ms]
+   [Code Root Purge: 0,0 ms]
+   [Clear CT: 9,9 ms]
+   [Other: 39,1 ms]
+      [Choose CSet: 0,0 ms]
+      [Ref Proc: 35,7 ms]
+      [Ref Enq: 0,6 ms]
+      [Redirty Cards: 0,4 ms]
+      [Humongous Register: 0,4 ms]
+      [Humongous Reclaim: 0,1 ms]
+      [Free CSet: 1,5 ms]
+   [Eden: 2040,0M(2040,0M)->0,0B(2032,0M) Survivors: 72,0M->72,0M Heap: 3377,6M(4096,0M)->1337,1M(4096,0M)]
+ [Times: user=0,48 sys=0,01, real=0,07 secs] 
+Heap
+ garbage-first heap  1, real=0,07 secs] 

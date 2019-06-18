@@ -1,0 +1,9 @@
+OpenJDK 64-Bit Server VM warning: Max heap size too large for Compressed Oops
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/06/12 16:39:57 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 3955781@sith0.cluster.ics.forth.gr
+19/06/12 16:39:57 INFO SignalUtils: Registered signal handler for TERM
+19/06/12 16:39:57 INFO SignalUtils: Registered signal handler for HUP
+19/06/12 16:39:57 INFO SignalUtils: Registered signal handler for INT
+19/06/12 16:39:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/06/12 16:39:57 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+ry for your platform... using builtin-java classes where applicable

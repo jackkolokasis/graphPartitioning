@@ -1,0 +1,9 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org)[0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org/apache,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org/apache)[0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org/apache/spark,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org/apache/spark)[0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org/apache/spark/streaming,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org/apache/spark/streaming)[0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org/apache/spark/streaming/ui,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org/apache/spark/streaming/ui)[0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org/apache/spark/streaming/ui/static,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org/apache/spark/streaming/ui/static)[0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org/apache/spark/streaming/ui/static/streaming-page.css,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org/apache/spark/streaming/ui/static/streaming-page.css)[0m
+[0m[[0mdebug[0m] [0m	(/opt/spark/spark-master/streaming/src/main/resources/org/apache/spark/streaming/ui/static/streaming-page.js,/opt/spark/spark-master/streaming/target/scala-2.11/classes/org/apache/spark/streaming/ui/static/streaming-page.js)[0m
